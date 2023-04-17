@@ -1,0 +1,769 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix : <http://www.semanticweb.org/pizzatutorial/ontologies/2020/PizzaTutorial#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix swrla: <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+
+swrla:isRuleEnabled
+    a owl:AnnotationProperty .
+
+<http://www.semanticweb.org/pizzatutorial/ontologies/2020/PizzaTutorial>
+    a owl:Ontology ;
+    rdfs:comment "A tutorial ontology for the Pizza domain.", "Developed by Michael DeBellis. Please direct all comments and questions. to mdebellissf@gmail.com Also, see my blog for other information and resources relevant to OWL, SWRL, and other knowledge graph technology: https://www.michaeldebellis.com/blog", """The PizzaTutorial is licensed under the GNU Affero General Public License v3.0
+Permissions of this strongest copyleft license are conditioned on making available complete source code of licensed works and modifications, which include larger works using a licensed work, under the same license. Copyright and license notices must be preserved. Contributors provide an express grant of patent rights. When a modified version is used to provide a service over a network, the complete source code of the modified version must be made available.""" .
+
+:AmericanaHotPizza
+    a owl:Class ;
+    rdfs:comment "A pizza that only has Mozzarella, Tomato, Jalapeno, and Pepperoni toppings" ;
+    rdfs:subClassOf :NamedPizza, [
+        a owl:Restriction ;
+        owl:onProperty :hasTopping ;
+        owl:someValuesFrom :JalapenoPepperTopping
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :hasTopping ;
+        owl:someValuesFrom :MozzarellaTopping
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :hasTopping ;
+        owl:someValuesFrom :PepperoniTopping
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :hasTopping ;
+        owl:someValuesFrom :TomatoTopping
+    ] .
+
+:AmericanaHotPizza1
+    :hasCaloricContent 767 ;
+    a :AmericanaHotPizza, owl:NamedIndividual .
+
+:AmericanaHotPizza2
+    :hasCaloricContent 675 ;
+    a :AmericanaHotPizza, owl:NamedIndividual .
+
+:AmericanaHotPizza3
+    a :AmericanaHotPizza, owl:NamedIndividual .
+
+:AmericanaPizza
+    a owl:Class ;
+    rdfs:comment "A pizza that only has Mozzarella, Tomato and Pepperoni toppings" ;
+    rdfs:subClassOf :NamedPizza, [
+        a owl:Restriction ;
+        owl:onProperty :hasTopping ;
+        owl:someValuesFrom :MozzarellaTopping
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :hasTopping ;
+        owl:someValuesFrom :PepperoniTopping
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :hasTopping ;
+        owl:someValuesFrom :TomatoTopping
+    ] .
+
+:AmericanaPizza1
+    :hasCaloricContent 723 ;
+    a :AmericanaPizza, owl:NamedIndividual .
+
+:AmericanaPizza2
+    :hasCaloricContent 543 ;
+    a :AmericanaPizza, owl:NamedIndividual .
+
+:AnchovyTopping
+    a owl:Class ;
+    rdfs:subClassOf :SeafoodTopping .
+
+:CaperTopping
+    a owl:Class ;
+    rdfs:subClassOf :VegetableTopping, [
+        a owl:Restriction ;
+        owl:hasValue :Mild ;
+        owl:onProperty :hasSpiciness
+    ] .
+
+:CheeseTopping
+    a owl:Class ;
+    rdfs:subClassOf :PizzaTopping, [
+        a owl:Restriction ;
+        owl:hasValue :Mild ;
+        owl:onProperty :hasSpiciness
+    ] .
+
+:CheesyPizza
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:Pizza
+            [
+                a owl:Restriction ;
+                owl:onProperty :hasTopping ;
+                owl:someValuesFrom :CheeseTopping
+            ]
+        )
+    ] .
+
+:CheesyPizza1
+    :hasCaloricContent 378 ;
+    a :CheesyPizza, owl:NamedIndividual .
+
+:Chef
+    :hasPhone "415-555-1234"^^xsd:string ;
+    :ssn "333-22-2334"^^xsd:string, "333-22-4444"^^xsd:string ;
+    a :Employee, owl:NamedIndividual .
+
+:ChicagoAmericanaHotPizza1
+    a :AmericanaHotPizza, owl:NamedIndividual .
+
+:CustomPizza1
+    :hasTopping :OliveTopping1, :SpicyBeefTopping1 ;
+    a :Pizza, owl:NamedIndividual .
+
+:CustomPizza2
+    :hasTopping :GreenPepperTopping2, :MushroomTopping2 ;
+    a :Pizza, owl:NamedIndividual .
+
+:Customer
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:Person
+            [
+                a owl:Restriction ;
+                owl:onProperty :purchasedPizza ;
+                owl:someValuesFrom :Pizza
+            ]
+            [
+                a owl:Restriction ;
+                owl:onProperty :hasPhone ;
+                owl:someValuesFrom xsd:string
+            ]
+        )
+    ] .
+
+:Customer1
+    :hasPhone "555-111-3332" ;
+    :hasSpicinessPreference :Hot ;
+    :numberOfPizzasPurchased 2 ;
+    :purchasedPizza :AmericanaHotPizza1, :AmericanaHotPizza2 ;
+    a :Customer, owl:NamedIndividual .
+
+:Customer10
+    :hasDiscount 2.0 ;
+    :hasPhone "555-111-3335" ;
+    :hasSpicinessPreference :Mild ;
+    :numberOfPizzasPurchased 1 ;
+    a :Customer, owl:NamedIndividual .
+
+:Customer2
+    :hasPhone "555-1113342" ;
+    :hasSpicinessPreference :Medium ;
+    :numberOfPizzasPurchased 2 ;
+    :purchasedPizza :CustomPizza2, :MargheritaPizza1 ;
+    a :Customer, owl:NamedIndividual .
+
+:Customer3
+    :hasSpicinessPreference :Mild ;
+    :numberOfPizzasPurchased 2 ;
+    :purchasedPizza :MargheritaPizza2, :SohoPizza1 ;
+    a :Customer, owl:NamedIndividual .
+
+:Customer4
+    :hasPhone "555-111-3339" ;
+    :hasSpicinessPreference :Hot ;
+    :numberOfPizzasPurchased 3 ;
+    :purchasedPizza :AmericanaHotPizza3, :HotVeggiePizza1 ;
+    a :Customer, owl:NamedIndividual .
+
+:Customer5
+    :hasPhone "555-111-3339" ;
+    :hasSpicinessPreference :Medium ;
+    :numberOfPizzasPurchased 2 ;
+    :purchasedPizza :AmericanaPizza1, :MediumVeggiePizza1 ;
+    a :Customer, owl:NamedIndividual .
+
+:Customer6
+    :hasPhone "555-111-3338" ;
+    :hasSpicinessPreference :Medium ;
+    :numberOfPizzasPurchased 1 ;
+    :purchasedPizza :AmericanaPizza2 ;
+    a :Customer, owl:NamedIndividual .
+
+:Customer7
+    :hasPhone "555-111-3337" ;
+    :hasSpicinessPreference :Mild ;
+    :numberOfPizzasPurchased 1 ;
+    :purchasedPizza :CheesyPizza1 ;
+    a :Customer, owl:NamedIndividual .
+
+:Customer8
+    :hasPhone "555-111-3336" ;
+    :hasSpicinessPreference :Hot ;
+    :numberOfPizzasPurchased 2 ;
+    :purchasedPizza :ChicagoAmericanaHotPizza1, :CustomPizza1 ;
+    a :Customer, owl:NamedIndividual .
+
+:Customer9
+    :hasPhone "555-111-3334" ;
+    :hasSpicinessPreference :Hot ;
+    :numberOfPizzasPurchased 1 ;
+    :purchasedPizza :HotVeggiePizza3 ;
+    a :Customer, owl:NamedIndividual .
+
+:DeepPanBase
+    a owl:Class ;
+    rdfs:subClassOf :PizzaBase ;
+    owl:disjointWith :ThinAndCrispyBase .
+
+:Employee
+    a owl:Class ;
+    rdfs:subClassOf [
+        a owl:Class ;
+        owl:intersectionOf (:Person
+            [
+                a owl:Restriction ;
+                owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                owl:onDataRange xsd:string ;
+                owl:onProperty :ssn
+            ]
+        )
+    ] .
+
+:GreenPepperTopping
+    a owl:Class ;
+    rdfs:subClassOf :PepperTopping, [
+        a owl:Restriction ;
+        owl:hasValue :Medium ;
+        owl:onProperty :hasSpiciness
+    ] .
+
+:GreenPepperTopping2
+    a :GreenPepperTopping, owl:NamedIndividual .
+
+:HamTopping
+    a owl:Class ;
+    rdfs:subClassOf :MeatTopping, [
+        a owl:Restriction ;
+        owl:hasValue :Mild ;
+        owl:onProperty :hasSpiciness
+    ] .
+
+:HighCaloriePizza
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:Pizza
+            [
+                a owl:Restriction ;
+                owl:onProperty :hasCaloricContent ;
+                owl:someValuesFrom [
+                    a rdfs:Datatype ;
+                    owl:onDatatype xsd:integer ;
+                    owl:withRestrictions ([
+                            xsd:minInclusive 400
+                        ]
+                    )
+                ]
+            ]
+        )
+    ] .
+
+:Hot
+    :isSpicierThan :Medium ;
+    a owl:NamedIndividual .
+
+:HotVeggiePizza
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:VegetarianPizza
+            [
+                a owl:Restriction ;
+                owl:onProperty :hasTopping ;
+                owl:someValuesFrom [
+                    a owl:Restriction ;
+                    owl:hasValue :Hot ;
+                    owl:onProperty :hasSpiciness
+                ]
+            ]
+        )
+    ] .
+
+:HotVeggiePizza1
+    a :HotVeggiePizza, owl:NamedIndividual .
+
+:HotVeggiePizza2
+    :purchasedByCustomer :Customer4 ;
+    a :HotVeggiePizza, owl:NamedIndividual .
+
+:HotVeggiePizza3
+    a :HotVeggiePizza, owl:NamedIndividual .
+
+:InterestingPizza
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:Pizza
+            [
+                a owl:Restriction ;
+                owl:minQualifiedCardinality "3"^^xsd:nonNegativeInteger ;
+                owl:onClass :PizzaTopping ;
+                owl:onProperty :hasTopping
+            ]
+        )
+    ] .
+
+:JalapenoPepperTopping
+    a owl:Class ;
+    rdfs:subClassOf :PepperTopping, [
+        a owl:Restriction ;
+        owl:hasValue :Hot ;
+        owl:onProperty :hasSpiciness
+    ] .
+
+:LowCaloriePizza
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:Pizza
+            [
+                a owl:Restriction ;
+                owl:onProperty :hasCaloricContent ;
+                owl:someValuesFrom [
+                    a rdfs:Datatype ;
+                    owl:onDatatype xsd:integer ;
+                    owl:withRestrictions ([
+                            xsd:maxExclusive 400
+                        ]
+                    )
+                ]
+            ]
+        )
+    ] .
+
+:Manager
+    :hasPhone "123-345-4567"^^xsd:string, "415-5554567"^^xsd:string ;
+    :ssn "321-23-4532"^^xsd:string ;
+    a :Employee, owl:NamedIndividual .
+
+:MargheritaPizza
+    a owl:Class ;
+    rdfs:comment "A pizza that only has Mozzarella and Tomato toppings" ;
+    rdfs:subClassOf :NamedPizza, [
+        a owl:Restriction ;
+        owl:onProperty :hasTopping ;
+        owl:someValuesFrom :MozzarellaTopping
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :hasTopping ;
+        owl:someValuesFrom :TomatoTopping
+    ], [
+        a owl:Restriction ;
+        owl:allValuesFrom [
+            a owl:Class ;
+            owl:unionOf (:MozzarellaTopping
+                :TomatoTopping
+            )
+        ] ;
+        owl:onProperty :hasTopping
+    ] .
+
+:MargheritaPizza1
+    :hasCaloricContent 263 ;
+    a :MargheritaPizza, owl:NamedIndividual .
+
+:MargheritaPizza2
+    :hasCaloricContent 376 ;
+    a :MargheritaPizza, owl:NamedIndividual .
+
+:MeatTopping
+    a owl:Class ;
+    rdfs:subClassOf :PizzaTopping .
+
+:Medium
+    :isSpicierThan :Mild ;
+    a owl:NamedIndividual .
+
+:MediumVeggiePizza
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:VegetarianPizza
+            [
+                a owl:Restriction ;
+                owl:allValuesFrom [
+                    a owl:Restriction ;
+                    owl:onProperty :hasSpiciness ;
+                    owl:someValuesFrom [
+                        a owl:Restriction ;
+                        owl:hasValue :Hot ;
+                        owl:onProperty :isMilderThan
+                    ]
+                ] ;
+                owl:onProperty :hasTopping
+            ]
+        )
+    ] .
+
+:MediumVeggiePizza1
+    a :MediumVeggiePizza, owl:NamedIndividual .
+
+:Mild
+    a :Spiciness, owl:NamedIndividual .
+
+:MozzarellaTopping
+    a owl:Class ;
+    rdfs:subClassOf :CheeseTopping ;
+    owl:disjointWith :ParmesanTopping .
+
+:MushroomTopping
+    a owl:Class ;
+    rdfs:subClassOf :VegetableTopping, [
+        a owl:Restriction ;
+        owl:hasValue :Mild ;
+        owl:onProperty :hasSpiciness
+    ] .
+
+:MushroomTopping2
+    a :MushroomTopping, owl:NamedIndividual .
+
+:NamedPizza
+    a owl:Class ;
+    rdfs:subClassOf :Pizza .
+
+:OliveTopping
+    a owl:Class ;
+    rdfs:subClassOf :VegetableTopping, [
+        a owl:Restriction ;
+        owl:hasValue :Mild ;
+        owl:onProperty :hasSpiciness
+    ] .
+
+:OliveTopping1
+    a :OliveTopping, owl:NamedIndividual .
+
+:ParmesanTopping
+    a owl:Class ;
+    rdfs:subClassOf :CheeseTopping .
+
+:PepperTopping
+    a owl:Class ;
+    rdfs:subClassOf :VegetableTopping .
+
+:PepperoniTopping
+    a owl:Class ;
+    rdfs:subClassOf :MeatTopping, [
+        a owl:Restriction ;
+        owl:hasValue :Medium ;
+        owl:onProperty :hasSpiciness
+    ] .
+
+:Person
+    a owl:Class .
+
+:Pizza
+    a owl:Class ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty :hasBase ;
+        owl:someValuesFrom :PizzaBase
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :hasCaloricContent ;
+        owl:someValuesFrom xsd:integer
+    ] .
+
+:PizzaBase
+    a owl:Class .
+
+:PizzaTopping
+    a owl:Class .
+
+:PrawnTopping
+    a owl:Class ;
+    rdfs:subClassOf :SeafoodTopping .
+
+:RedPepperTopping
+    a owl:Class ;
+    rdfs:subClassOf :PepperTopping, [
+        a owl:Restriction ;
+        owl:hasValue :Hot ;
+        owl:onProperty :hasSpiciness
+    ] .
+
+:SalamiTopping
+    a owl:Class ;
+    rdfs:subClassOf :MeatTopping, [
+        a owl:Restriction ;
+        owl:hasValue :Medium ;
+        owl:onProperty :hasSpiciness
+    ] .
+
+:SeafoodTopping
+    a owl:Class ;
+    rdfs:subClassOf :PizzaTopping, [
+        a owl:Restriction ;
+        owl:hasValue :Mild ;
+        owl:onProperty :hasSpiciness
+    ] .
+
+:SohoPizza
+    a owl:Class ;
+    rdfs:comment "A pizza that  has Mozzarella, Olives, Parmesan, and Tomato toppings" ;
+    rdfs:subClassOf :NamedPizza, [
+        a owl:Restriction ;
+        owl:onProperty :hasTopping ;
+        owl:someValuesFrom :MozzarellaTopping
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :hasTopping ;
+        owl:someValuesFrom :OliveTopping
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :hasTopping ;
+        owl:someValuesFrom :ParmesanTopping
+    ], [
+        a owl:Restriction ;
+        owl:onProperty :hasTopping ;
+        owl:someValuesFrom :TomatoTopping
+    ], [
+        a owl:Restriction ;
+        owl:allValuesFrom [
+            a owl:Class ;
+            owl:unionOf (:MozzarellaTopping
+                :OliveTopping
+                :ParmesanTopping
+                :TomatoTopping
+            )
+        ] ;
+        owl:onProperty :hasTopping
+    ] .
+
+:SohoPizza1
+    :hasCaloricContent 342 ;
+    a :SohoPizza, owl:NamedIndividual .
+
+:SohoPizza2
+    :hasCaloricContent 322 ;
+    :purchasedByCustomer :Customer10 ;
+    a :SohoPizza, owl:NamedIndividual .
+
+:Spiciness
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:oneOf (:Hot
+            :Medium
+            :Mild
+        )
+    ] .
+
+:SpicyBeefTopping
+    a owl:Class ;
+    rdfs:subClassOf :MeatTopping, [
+        a owl:Restriction ;
+        owl:hasValue :Hot ;
+        owl:onProperty :hasSpiciness
+    ] .
+
+:SpicyBeefTopping1
+    a :SpicyBeefTopping, owl:NamedIndividual .
+
+:SpicyPizza
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:Pizza
+            [
+                a owl:Restriction ;
+                owl:onProperty :hasTopping ;
+                owl:someValuesFrom [
+                    a owl:Restriction ;
+                    owl:hasValue :Hot ;
+                    owl:onProperty :hasSpiciness
+                ]
+            ]
+        )
+    ] .
+
+:ThinAndCrispyBase
+    a owl:Class ;
+    rdfs:subClassOf :PizzaBase .
+
+:TomatoTopping
+    a owl:Class ;
+    rdfs:subClassOf :VegetableTopping .
+
+:TunaTopping
+    a owl:Class ;
+    rdfs:subClassOf :SeafoodTopping .
+
+:VegetableTopping
+    a owl:Class ;
+    rdfs:subClassOf :PizzaTopping .
+
+:VegetarianPizza
+    a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:intersectionOf (:Pizza
+            [
+                a owl:Restriction ;
+                owl:allValuesFrom [
+                    a owl:Class ;
+                    owl:unionOf (:CheeseTopping
+                        :VegetableTopping
+                    )
+                ] ;
+                owl:onProperty :hasTopping
+            ]
+        )
+    ] .
+
+:Waiter1
+    :hasPhone "123-234-3434"^^xsd:string ;
+    :ssn "123456666"^^xsd:string ;
+    a :Employee, owl:NamedIndividual .
+
+:Waiter2
+    a :Employee, owl:NamedIndividual .
+
+:hasBase
+    a owl:ObjectProperty ;
+    rdfs:domain :Pizza ;
+    rdfs:range :PizzaBase ;
+    rdfs:subPropertyOf :hasIngredient ;
+    owl:inverseOf :isBaseOf .
+
+:hasCaloricContent
+    a owl:DatatypeProperty ;
+    rdfs:domain :Pizza ;
+    rdfs:range xsd:integer .
+
+:hasDiscount
+    a owl:DatatypeProperty ;
+    rdfs:domain :Customer ;
+    rdfs:range xsd:decimal .
+
+:hasIngredient
+    a owl:ObjectProperty ;
+    owl:inverseOf :isIngredientOf .
+
+:hasPhone
+    a owl:DatatypeProperty ;
+    rdfs:domain :Person ;
+    rdfs:range xsd:string .
+
+:hasSpiciness
+    a owl:ObjectProperty ;
+    rdfs:domain :PizzaTopping ;
+    rdfs:range :Spiciness .
+
+:hasSpicinessPreference
+    a owl:ObjectProperty ;
+    rdfs:domain :Customer ;
+    rdfs:range :Spiciness .
+
+:hasTopping
+    a owl:ObjectProperty ;
+    rdfs:domain :Pizza ;
+    rdfs:range :PizzaTopping ;
+    rdfs:subPropertyOf :hasIngredient ;
+    owl:inverseOf :isToppingOf .
+
+:isBaseOf
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf :isIngredientOf .
+
+:isIngredientOf
+    a owl:FunctionalProperty, owl:ObjectProperty .
+
+:isMilderThan
+    a owl:ObjectProperty ;
+    owl:inverseOf :isSpicierThan .
+
+:isSpicierThan
+    a owl:ObjectProperty, owl:TransitiveProperty ;
+    rdfs:domain :Spiciness ;
+    rdfs:range :Spiciness .
+
+:isToppingOf
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf :isIngredientOf .
+
+:numberOfPizzasPurchased
+    a owl:DatatypeProperty ;
+    rdfs:domain :Customer ;
+    rdfs:range xsd:integer .
+
+:purchasedByCustomer
+    a owl:FunctionalProperty, owl:ObjectProperty ;
+    owl:inverseOf :purchasedPizza .
+
+:purchasedPizza
+    a owl:ObjectProperty ;
+    rdfs:domain :Customer ;
+    rdfs:range :Pizza .
+
+:ssn
+    a owl:DatatypeProperty ;
+    rdfs:domain :Employee ;
+    rdfs:range xsd:string .
+
+[]
+    a owl:AllDisjointClasses ;
+    owl:members (:AnchovyTopping
+        :PrawnTopping
+        :TunaTopping
+    ) .
+
+[]
+    a owl:AllDisjointClasses ;
+    owl:members (:CaperTopping
+        :MushroomTopping
+        :OliveTopping
+        :PepperTopping
+        :TomatoTopping
+    ) .
+
+[]
+    a owl:AllDisjointClasses ;
+    owl:members (:CheeseTopping
+        :MeatTopping
+        :SeafoodTopping
+        :VegetableTopping
+    ) .
+
+[]
+    a owl:AllDisjointClasses ;
+    owl:members (:GreenPepperTopping
+        :JalapenoPepperTopping
+        :RedPepperTopping
+    ) .
+
+[]
+    a owl:AllDisjointClasses ;
+    owl:members (:HamTopping
+        :PepperoniTopping
+        :SalamiTopping
+        :SpicyBeefTopping
+    ) .
+
+[]
+    a owl:AllDisjointClasses ;
+    owl:members (:Pizza
+        :PizzaBase
+        :PizzaTopping
+    ) .
+
+[]
+    a owl:AllDisjointClasses ;
+    owl:members (:AmericanaHotPizza
+        :AmericanaPizza
+        :MargheritaPizza
+        :SohoPizza
+    ) .
+

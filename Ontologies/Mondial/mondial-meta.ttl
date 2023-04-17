@@ -1,0 +1,897 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix : <http://www.semwebtech.org/mondial/10/meta#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:AdministrativeArea
+    a owl:Class ;
+    owl:disjointUnionOf (:Country
+        :Province
+    ) .
+
+:AdministrativeSubdivision
+    a owl:Class ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onClass :Country ;
+        owl:onProperty :belongsTo ;
+        owl:qualifiedCardinality 1
+    ] ;
+    owl:disjointUnionOf (:Province
+        :City
+    ) .
+
+:AnthropoGeographicalRelationship
+    a owl:Class ;
+    owl:disjointUnionOf (:SpokenBy
+        :BelievedBy
+        :EthnicProportion
+    ) .
+
+:AnthropoGeographicalThing
+    a owl:Class ;
+    owl:disjointUnionOf (:Language
+        :Religion
+        :EthnicGroup
+    ) ;
+    owl:disjointWith :Geometrical .
+
+:Archipelago
+    rdfs:subClassOf :SmallArea .
+
+:Area
+    a owl:Class ;
+    owl:disjointUnionOf (:SmallArea
+        :LargeArea
+    ) .
+
+:BelievedBy
+    rdfs:subClassOf :AnthropoGeographicalRelationship .
+
+:Border
+    rdfs:subClassOf :Line, [
+        a owl:Restriction ;
+        owl:cardinality 2 ;
+        owl:onProperty :isBorderOf
+    ] .
+
+:City
+    rdfs:subClassOf :AdministrativeSubdivision, :GeographicalThing, :SmallArea, [
+        a owl:Restriction ;
+        owl:onClass :Country ;
+        owl:onProperty :locatedIn ;
+        owl:qualifiedCardinality 1
+    ], [
+        a owl:Restriction ;
+        owl:maxQualifiedCardinality 1 ;
+        owl:onClass :Province ;
+        owl:onProperty :locatedIn
+    ], [
+        a owl:Restriction ;
+        owl:maxQualifiedCardinality 1 ;
+        owl:onClass :Province ;
+        owl:onProperty :cityIn
+    ], [
+        a owl:Restriction ;
+        owl:onClass :Country ;
+        owl:onProperty :cityIn ;
+        owl:qualifiedCardinality 1
+    ], [
+        a owl:Restriction ;
+        owl:cardinality 0 ;
+        owl:onProperty :area
+    ], [
+        a owl:Restriction ;
+        owl:maxQualifiedCardinality 1 ;
+        owl:onClass :Country ;
+        owl:onProperty :isCapitalOf
+    ] .
+
+:Continent
+    rdfs:subClassOf :LargeArea, [
+        a owl:Restriction ;
+        owl:allValuesFrom owl:Nothing ;
+        owl:onProperty :locatedIn
+    ] ;
+    owl:disjointWith :Province .
+
+:Country
+    rdfs:subClassOf :LargeArea .
+
+:Desert
+    rdfs:subClassOf :SmallArea, [
+        a owl:Restriction ;
+        owl:allValuesFrom [
+            owl:complementOf :City
+        ] ;
+        owl:onProperty :locatedIn
+    ] .
+
+:Encompassed
+    rdfs:subClassOf :ReifiedThing .
+
+:EncompassedArea
+    a owl:Class ;
+    owl:equivalentClass [
+        owl:intersectionOf (:LargeArea
+            [
+                owl:complementOf :Continent
+            ]
+            [
+                owl:complementOf :Sea
+            ]
+        )
+    ] .
+
+:Estuary
+    rdfs:subClassOf :Place, [
+        a owl:Restriction ;
+        owl:cardinality 1 ;
+        owl:onProperty :hasEstuary-
+    ] ;
+    owl:disjointWith :Area .
+
+:EthnicGroup
+    rdfs:subClassOf :AnthropoGeographicalThing .
+
+:EthnicProportion
+    rdfs:subClassOf :AnthropoGeographicalRelationship .
+
+:GeographicalNonPoliticalThing
+    a owl:Class ;
+    owl:disjointUnionOf (:Continent
+        :Water
+        :Source
+        :Estuary
+        :Desert
+        :Island
+        :Mountain
+        :Archipelago
+        :MountainRange
+    ) ;
+    owl:disjointWith :PoliticalThing .
+
+:GeographicalThing
+    a owl:Class ;
+    owl:disjointUnionOf (:City
+        :GeographicalNonPoliticalThing
+    ) .
+
+:Geometrical
+    a owl:Class ;
+    owl:unionOf (:Place
+        :Area
+        :Line
+    ) .
+
+:Island
+    rdfs:subClassOf :SmallArea .
+
+:Lake
+    rdfs:subClassOf :SmallArea, [
+        a owl:Restriction ;
+        owl:allValuesFrom [
+            owl:complementOf :Lake
+        ] ;
+        owl:onProperty :locatedIn
+    ] .
+
+:Language
+    rdfs:subClassOf :AnthropoGeographicalThing .
+
+:LargeArea
+    a owl:Class ;
+    rdfs:subClassOf :Area .
+
+:Line
+    a owl:Class ;
+    owl:disjointWith :Area, :Place .
+
+:Location
+    a owl:Class ;
+    owl:disjointUnionOf (:Place
+        :SmallArea
+    ) .
+
+:Measurement
+    rdfs:subClassOf :TimeSeriesElement .
+
+:Membership
+    rdfs:subClassOf :ReifiedThing .
+
+:MondialThing
+    a owl:Class ;
+    owl:disjointUnionOf (:PoliticalOrGeographicalThing
+        :AnthropoGeographicalThing
+        :ReifiedThing
+    ) .
+
+:Mountain
+    rdfs:subClassOf :Place .
+
+:MountainRange
+    rdfs:subClassOf :SmallArea, [
+        a owl:Restriction ;
+        owl:allValuesFrom [
+            owl:complementOf :City
+        ] ;
+        owl:onProperty :locatedIn
+    ] .
+
+:NonGeographicalPoliticalThing
+    a owl:Class ;
+    owl:disjointUnionOf (:Country
+        :Province
+        :Organization
+        :Border
+    ) .
+
+:Organization
+    a owl:Class ;
+    owl:disjointWith :Geometrical .
+
+:Place
+    a owl:Class ;
+    owl:disjointWith :Area .
+
+:PoliticalBody
+    rdfs:subClassOf :PoliticalThing ;
+    owl:disjointUnionOf (:Country
+        :Organization
+    ) ;
+    owl:disjointWith :AdministrativeSubdivision .
+
+:PoliticalOrGeographicalThing
+    a owl:Class ;
+    owl:unionOf (:PoliticalThing
+        :GeographicalThing
+    ) .
+
+:PoliticalThing
+    a owl:Class ;
+    owl:disjointUnionOf (:NonGeographicalPoliticalThing
+        :City
+    ) .
+
+:PopulationCount
+    a owl:Class ;
+    rdfs:subClassOf :YearlyMeasurement, [
+        a owl:Restriction ;
+        owl:allValuesFrom [
+            owl:unionOf (:Country
+                :Province
+                :City
+            )
+        ] ;
+        owl:onProperty :ofObject
+    ] .
+
+:Province
+    rdfs:subClassOf :LargeArea .
+
+:ReifiedThing
+    a owl:Class ;
+    owl:disjointUnionOf (:Membership
+        :Encompassed
+        :SpokenBy
+        :BelievedBy
+        :EthnicProportion
+    ) ;
+    owl:disjointWith :Geometrical .
+
+:Religion
+    rdfs:subClassOf :AnthropoGeographicalThing .
+
+:River
+    rdfs:subClassOf :Line, [
+        a owl:Restriction ;
+        owl:cardinality 1 ;
+        owl:onProperty :hasEstuary
+    ], [
+        a owl:Restriction ;
+        owl:cardinality 1 ;
+        owl:onProperty :hasSource
+    ], [
+        a owl:Restriction ;
+        owl:allValuesFrom [
+            owl:complementOf :City
+        ] ;
+        owl:onProperty :locatedIn
+    ] .
+
+:Sea
+    rdfs:subClassOf :LargeArea, [
+        a owl:Restriction ;
+        owl:allValuesFrom [
+            owl:unionOf (:Province
+                :Country
+                :Continent
+            )
+        ] ;
+        owl:onProperty :locatedIn
+    ] ;
+    owl:disjointWith :Province .
+
+:Source
+    rdfs:subClassOf :Place, [
+        a owl:Restriction ;
+        owl:cardinality 1 ;
+        owl:onProperty :hasSource-
+    ] ;
+    owl:disjointWith :Area .
+
+:SpokenBy
+    rdfs:subClassOf :AnthropoGeographicalRelationship .
+
+:TimeSeriesElement
+    a owl:Class ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:maxCardinality 1 ;
+        owl:onProperty :year
+    ] .
+
+:Volcano
+    rdfs:subClassOf :Mountain .
+
+:Water
+    a owl:Class ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:maxCardinality 1 ;
+        owl:onProperty :flowsInto
+    ] ;
+    owl:disjointUnionOf (:River
+        :Lake
+        :Sea
+    ) .
+
+:YearlyMeasurement
+    rdfs:subClassOf :Measurement, :TimeSeriesElement, [
+        a owl:Restriction ;
+        owl:cardinality 1 ;
+        owl:onProperty :year
+    ] .
+
+:abbrev
+    a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain :Organization ;
+    rdfs:range xsd:string .
+
+:area
+    a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain [
+        owl:unionOf (:Area
+            :River
+        )
+    ] ;
+    rdfs:range xsd:decimal .
+
+:believeInReligion
+    a owl:ObjectProperty ;
+    rdfs:domain :Country ;
+    rdfs:range :Religion ;
+    owl:inverseOf :believedInCountry .
+
+:belongToEthnicGroup
+    a owl:ObjectProperty ;
+    rdfs:domain :Country ;
+    rdfs:range :EthnicGroup ;
+    owl:inverseOf :liveInCountry .
+
+:belongsToArchipelago
+    a owl:FunctionalProperty, owl:ObjectProperty ;
+    rdfs:domain :Island ;
+    rdfs:range :Archipelago .
+
+:borders
+    a owl:ObjectProperty ;
+    rdfs:domain :LargeArea ;
+    rdfs:range :LargeArea .
+
+:capital
+    a owl:FunctionalProperty, owl:ObjectProperty ;
+    rdfs:domain :AdministrativeArea ;
+    rdfs:range :City ;
+    owl:inverseOf :isCapitalOf .
+
+:carCode
+    a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain :Country ;
+    rdfs:range xsd:string .
+
+:cityIn
+    a owl:ObjectProperty .
+
+:dependentOf
+    a owl:FunctionalProperty, owl:ObjectProperty ;
+    rdfs:domain :Country ;
+    rdfs:range :Country .
+
+:depth
+    a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain [
+        owl:unionOf (:Sea
+            :Lake
+        )
+    ] ;
+    rdfs:range xsd:decimal .
+
+:elevation
+    a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain :Location, [
+        owl:intersectionOf (:Location
+            [
+                owl:complementOf :Desert
+            ]
+        )
+    ] ;
+    rdfs:range xsd:decimal .
+
+:encompassed
+    a owl:ObjectProperty ;
+    rdfs:domain :EncompassedArea ;
+    rdfs:range :Continent ;
+    owl:inverseOf :encompasses .
+
+:encompassedArea
+    a owl:FunctionalProperty, owl:ObjectProperty ;
+    rdfs:domain :Encompassed ;
+    rdfs:range :EncompassedArea ;
+    owl:inverseOf :encompassedByInfo .
+
+:encompassedBy
+    a owl:FunctionalProperty, owl:ObjectProperty ;
+    rdfs:domain :Encompassed ;
+    rdfs:range :Continent ;
+    owl:inverseOf :encompassesInfo .
+
+:encompasses
+    a owl:ObjectProperty .
+
+:established
+    a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain :Organization ;
+    rdfs:range xsd:date .
+
+:ethnicInfo
+    a owl:InverseFunctionalProperty, owl:ObjectProperty ;
+    rdfs:domain :Country ;
+    rdfs:range :EthnicProportion ;
+    owl:inverseOf :ethnicInfo- .
+
+:flowsInto
+    a owl:ObjectProperty ;
+    rdfs:domain [
+        owl:unionOf (:River
+            :Lake
+        )
+    ] ;
+    rdfs:range :Water .
+
+:flowsThrough
+    a owl:InverseFunctionalProperty, owl:ObjectProperty ;
+    rdfs:domain :River ;
+    rdfs:range :Lake .
+
+:gdpAgri
+    a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain :Country ;
+    rdfs:range xsd:decimal .
+
+:gdpInd
+    a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain :Country ;
+    rdfs:range xsd:decimal .
+
+:gdpServ
+    a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain :Country ;
+    rdfs:range xsd:decimal .
+
+:gdpTotal
+    a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain :Country ;
+    rdfs:range xsd:decimal .
+
+:government
+    a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain :Country ;
+    rdfs:range xsd:string .
+
+:hadPopulation
+    a owl:InverseFunctionalProperty, owl:ObjectProperty ;
+    rdfs:domain [
+        owl:unionOf (:Country
+            :Province
+            :City
+        )
+    ] ;
+    rdfs:range :PopulationCount .
+
+:hasBorder
+    a owl:ObjectProperty .
+
+:hasCity
+    a owl:ObjectProperty ;
+    rdfs:domain :AdministrativeArea ;
+    rdfs:range :City ;
+    owl:inverseOf :cityIn .
+
+:hasEstuary
+    a owl:FunctionalProperty, owl:InverseFunctionalProperty, owl:ObjectProperty ;
+    rdfs:domain :River ;
+    rdfs:range :Estuary ;
+    owl:inverseOf :hasEstuary- .
+
+:hasEstuary-
+    a owl:ObjectProperty .
+
+:hasHeadq
+    a owl:FunctionalProperty, owl:ObjectProperty ;
+    rdfs:domain :Organization ;
+    rdfs:range :City .
+
+:hasMember
+    a owl:ObjectProperty .
+
+:hasProvince
+    a owl:InverseFunctionalProperty, owl:ObjectProperty ;
+    rdfs:domain :Country ;
+    rdfs:range :Province ;
+    owl:inverseOf :isProvinceOf .
+
+:hasSource
+    a owl:FunctionalProperty, owl:InverseFunctionalProperty, owl:ObjectProperty ;
+    rdfs:domain :River ;
+    rdfs:range :Source ;
+    owl:inverseOf :hasSource- .
+
+:hasSource-
+    a owl:ObjectProperty .
+
+:inMountains
+    a owl:FunctionalProperty, owl:ObjectProperty ;
+    rdfs:domain [
+        owl:unionOf (:Mountain
+            :Source
+        )
+    ] ;
+    rdfs:range :MountainRange .
+
+:inOrganization
+    a owl:FunctionalProperty, owl:ObjectProperty ;
+    rdfs:domain :Membership ;
+    rdfs:range :Organization ;
+    owl:inverseOf :hasMembership .
+
+:independenceDate
+    a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain :Country ;
+    rdfs:range xsd:date .
+
+:infantMortality
+    a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain :Country ;
+    rdfs:range xsd:decimal .
+
+:inflation
+    a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain :Country ;
+    rdfs:range xsd:decimal .
+
+:isBorderOf
+    a owl:ObjectProperty ;
+    rdfs:domain :Border ;
+    rdfs:range :Country ;
+    owl:inverseOf :hasBorder .
+
+:isCapitalOf
+    a owl:ObjectProperty .
+
+:isMember
+    a owl:ObjectProperty ;
+    rdfs:domain :Country ;
+    rdfs:range :Organization ;
+    owl:inverseOf :hasMember .
+
+:isProvinceOf
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf :belongsTo .
+
+:languageInfo
+    a owl:InverseFunctionalProperty, owl:ObjectProperty ;
+    rdfs:domain :Country ;
+    rdfs:range :SpokenBy ;
+    owl:inverseOf :languageInfo- .
+
+:lastEruption
+    a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain :Volcano ;
+    rdfs:range xsd:date .
+
+:latitude
+    a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain :Location ;
+    rdfs:range xsd:decimal .
+
+:length
+    a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain :Line ;
+    rdfs:range xsd:decimal .
+
+:localname
+    a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain [
+        a owl:Class ;
+        owl:unionOf (:Country
+            :Province
+            :City
+        )
+    ] ;
+    rdfs:range xsd:string .
+
+:locatedAt
+    a owl:ObjectProperty ;
+    rdfs:domain :City ;
+    rdfs:range :Water .
+
+:locatedIn
+    a owl:ObjectProperty ;
+    rdfs:domain :GeographicalThing, [
+        owl:intersectionOf (:GeographicalThing
+            [
+                owl:complementOf :Continent
+            ]
+        )
+    ] ;
+    rdfs:range :Area .
+
+:locatedInWater
+    a owl:ObjectProperty ;
+    rdfs:domain :Island ;
+    rdfs:range :Water .
+
+:locatedOnIsland
+    a owl:ObjectProperty ;
+    rdfs:domain [
+        owl:unionOf (:City
+            :Mountain
+            :River
+            :Lake
+        )
+    ] ;
+    rdfs:range :Island ;
+    rdfs:subPropertyOf :locatedIn .
+
+:longitude
+    a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain :Location ;
+    rdfs:range xsd:decimal .
+
+:mergesWith
+    a owl:ObjectProperty, owl:SymmetricProperty ;
+    rdfs:domain :Sea ;
+    rdfs:range :Sea ;
+    rdfs:subPropertyOf :borders .
+
+:name
+    a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain [
+        a owl:Class ;
+        owl:intersectionOf (:MondialThing
+            [
+                owl:complementOf :ReifiedThing
+            ]
+            [
+                owl:complementOf :Border
+            ]
+            [
+                owl:complementOf :Source
+            ]
+            [
+                owl:complementOf :Estuary
+            ]
+        )
+    ] ;
+    rdfs:range xsd:string .
+
+:neighbor
+    a owl:ObjectProperty, owl:SymmetricProperty ;
+    rdfs:domain :Country ;
+    rdfs:range :Country ;
+    rdfs:subPropertyOf :borders .
+
+:ofMember
+    a owl:FunctionalProperty, owl:ObjectProperty ;
+    rdfs:domain :Membership ;
+    rdfs:range :Country ;
+    owl:inverseOf :isInMembership .
+
+:ofObject
+    a owl:FunctionalProperty ;
+    rdfs:domain :Measurement ;
+    rdfs:range :MondialThing .
+
+:onEthnicGroup
+    a owl:FunctionalProperty, owl:ObjectProperty ;
+    rdfs:domain :EthnicProportion ;
+    rdfs:range :EthnicGroup ;
+    owl:inverseOf :liveInInfo .
+
+:onLanguage
+    a owl:FunctionalProperty, owl:ObjectProperty ;
+    rdfs:domain :SpokenBy ;
+    rdfs:range :Language ;
+    owl:inverseOf :spokenInInfo .
+
+:onReligion
+    a owl:FunctionalProperty, owl:ObjectProperty ;
+    rdfs:domain :BelievedBy ;
+    rdfs:range :Religion ;
+    owl:inverseOf :followedInInfo .
+
+:othername
+    a owl:DatatypeProperty ;
+    rdfs:domain [
+        a owl:Class ;
+        owl:intersectionOf (:MondialThing
+            [
+                owl:complementOf :ReifiedThing
+            ]
+            [
+                owl:complementOf :Border
+            ]
+            [
+                owl:complementOf :Source
+            ]
+            [
+                owl:complementOf :Estuary
+            ]
+        )
+    ] ;
+    rdfs:range xsd:string .
+
+:percent
+    a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain [
+        owl:unionOf (:SpokenBy
+            :BelievedBy
+            :EthnicProportion
+            :Encompassed
+        )
+    ] ;
+    rdfs:range xsd:decimal .
+
+:population
+    a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain [
+        owl:intersectionOf (:Area
+            [
+                owl:complementOf :Continent
+            ]
+            [
+                owl:complementOf :Desert
+            ]
+            [
+                owl:complementOf :Water
+            ]
+            [
+                owl:complementOf :MountainRange
+            ]
+        )
+    ] ;
+    rdfs:range xsd:nonNegativeInteger .
+
+:populationGrowth
+    a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain :Country ;
+    rdfs:range xsd:decimal .
+
+:religionInfo
+    a owl:InverseFunctionalProperty, owl:ObjectProperty ;
+    rdfs:domain :Country ;
+    rdfs:range :BelievedBy ;
+    owl:inverseOf :religionInfo- .
+
+:speakLanguage
+    a owl:ObjectProperty ;
+    rdfs:domain :Country ;
+    rdfs:range :Language ;
+    owl:inverseOf :spokenInCountry .
+
+:type
+    a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain [
+        a owl:Class ;
+        owl:intersectionOf ([
+                owl:unionOf (:GeographicalThing
+                    :Membership
+                )
+            ]
+            [
+                owl:complementOf :Continent
+            ]
+            [
+                owl:complementOf :River
+            ]
+            [
+                owl:complementOf :Source
+            ]
+            [
+                owl:complementOf :Estuary
+            ]
+            [
+                owl:complementOf :City
+            ]
+        )
+    ] ;
+    rdfs:range xsd:string .
+
+:unemployment
+    a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain :Country ;
+    rdfs:range xsd:decimal .
+
+:value
+    a owl:DatatypeProperty, owl:FunctionalProperty ;
+    rdfs:domain :Measurement ;
+    rdfs:range xsd:decimal .
+
+:wasDependentOf
+    a owl:FunctionalProperty, owl:ObjectProperty ;
+    rdfs:domain :Country ;
+    rdfs:range :PoliticalBody .
+
+:year
+    a owl:DatatypeProperty ;
+    rdfs:domain :YearlyMeasurement ;
+    rdfs:range xsd:gYear .
+
+[]
+    a owl:ObjectProperty ;
+    rdfs:subPropertyOf :ofObject ;
+    owl:inverseOf :hadPopulation .
+
+[]
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:maxCardinality 1 ;
+        owl:onProperty :locatedOnIsland
+    ] ;
+    owl:unionOf (:Mountain
+        :River
+        :Lake
+    ) .
+
+[]
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:minQualifiedCardinality 1 ;
+        owl:onClass :Country ;
+        owl:onProperty :locatedIn
+    ] ;
+    owl:intersectionOf (:GeographicalThing
+        [
+            owl:complementOf :Continent
+        ]
+    ) .
+
+[]
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty [
+            a owl:ObjectProperty ;
+            owl:inverseOf :hadPopulation
+        ] ;
+        owl:someValuesFrom owl:Thing
+    ] ;
+    owl:intersectionOf (:PopulationCount
+        [
+            a owl:Restriction ;
+            owl:onProperty :ofObject ;
+            owl:someValuesFrom owl:Thing
+        ]
+    ) .
+

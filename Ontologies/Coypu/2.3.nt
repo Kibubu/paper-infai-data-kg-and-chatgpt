@@ -1,0 +1,1617 @@
+<https://schema.coypu.org/global> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://schema.coypu.org/global> <http://www.w3.org/2002/07/owl#versionIRI> <https://schema.coypu.org/global/2.3> .
+<https://schema.coypu.org/global> <http://www.w3.org/2002/07/owl#imports> <https://schema.coypu.org/em-dat/1.0> .
+<https://schema.coypu.org/global> <http://www.w3.org/2002/07/owl#imports> <https://schema.coypu.org/gta/1.0> .
+<https://schema.coypu.org/global> <http://www.w3.org/2002/07/owl#imports> <https://schema.coypu.org/ta/1.0> .
+<https://schema.coypu.org/global> <http://www.w3.org/2002/07/owl#imports> <https://schema.coypu.org/vtf/1.4> .
+<https://schema.coypu.org/global> <http://www.w3.org/2002/07/owl#imports> <https://schema.coypu.org/world-port-index/1.0> .
+<https://schema.coypu.org/global> <http://creativecommons.org/ns#license> <https://creativecommons.org/licenses/by/4.0/> .
+<https://schema.coypu.org/global> <http://purl.org/dc/terms/contributor> "Andreas Schaefer"@en .
+<https://schema.coypu.org/global> <http://purl.org/dc/terms/contributor> "Eva Hoerster"@en .
+<https://schema.coypu.org/global> <http://purl.org/dc/terms/contributor> "Felix Engel"@en .
+<https://schema.coypu.org/global> <http://purl.org/dc/terms/contributor> "Jan Reineke"@en .
+<https://schema.coypu.org/global> <http://purl.org/dc/terms/contributor> "Justus Rathschlag"@en .
+<https://schema.coypu.org/global> <http://purl.org/dc/terms/contributor> "Lars Michaelis"@en .
+<https://schema.coypu.org/global> <http://purl.org/dc/terms/contributor> "Lorenz Bühmann"@en .
+<https://schema.coypu.org/global> <http://purl.org/dc/terms/contributor> "Malte Weber"@en .
+<https://schema.coypu.org/global> <http://purl.org/dc/terms/contributor> "Nadine Weissmann"@en .
+<https://schema.coypu.org/global> <http://purl.org/dc/terms/contributor> "Natanael Arndt"@en .
+<https://schema.coypu.org/global> <http://purl.org/dc/terms/contributor> "Nenad Krdzavac"@en .
+<https://schema.coypu.org/global> <http://purl.org/dc/terms/contributor> "Phillip Ulrich"@en .
+<https://schema.coypu.org/global> <http://purl.org/dc/terms/contributor> "Ricardo Usbeck"@en .
+<https://schema.coypu.org/global> <http://purl.org/dc/terms/contributor> "Sabine Gründer-Fahrer"@en .
+<https://schema.coypu.org/global> <http://purl.org/dc/terms/contributor> "Simon Bin"@en .
+<https://schema.coypu.org/global> <http://purl.org/dc/terms/contributor> "Till Grabo"@en .
+<https://schema.coypu.org/global> <http://purl.org/dc/terms/created> "2021-09-06"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://schema.coypu.org/global> <http://purl.org/dc/terms/creator> "Nils Steinert"@en .
+<https://schema.coypu.org/global> <http://purl.org/dc/terms/modified> "2022-02-13"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://schema.coypu.org/global> <http://purl.org/dc/terms/rights> "CC BY 4.0 - CoyPu Project"@en .
+<https://schema.coypu.org/global> <http://purl.org/dc/terms/title> "CoyPu Ontology"@en .
+<https://schema.coypu.org/global> <http://purl.org/vocab/vann/preferredNamespacePrefix> "coy" .
+<https://schema.coypu.org/global> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://schema.coypu.org/global#" .
+<https://schema.coypu.org/global> <http://www.w3.org/2000/01/rdf-schema#comment> "The main ontology for the CoyPu project, used to describe companies and their supply network, employees, products, production materials, industries, events and relations."@en .
+<https://schema.coypu.org/global> <http://www.w3.org/2000/01/rdf-schema#label> "coy: CoyPu Ontology"@en .
+<https://schema.coypu.org/global> <http://www.w3.org/2002/07/owl#priorVersion> <https://schema.coypu.org/global/2.1> .
+<https://schema.coypu.org/global> <http://www.w3.org/2002/07/owl#versionInfo> "2.3"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://creativecommons.org/ns#license
+<http://creativecommons.org/ns#license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/rights
+<http://purl.org/dc/terms/rights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2000/01/rdf-schema#label
+<http://www.w3.org/2000/01/rdf-schema#label> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://creativecommons.org/ns#license
+<https://creativecommons.org/ns#license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/about
+<https://schema.org/about> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/domainIncludes
+<https://schema.org/domainIncludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/maxValue
+<https://schema.org/maxValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/minValue
+<https://schema.org/minValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/rangeIncludes
+<https://schema.org/rangeIncludes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/unitCode
+<https://schema.org/unitCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/unitText
+<https://schema.org/unitText> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://schema.coypu.org/global#hasAffiliation
+<https://schema.coypu.org/global#hasAffiliation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.coypu.org/global#hasAffiliation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#hasAffiliation> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#hasAffiliation> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship between two companies."@en .
+<https://schema.coypu.org/global#hasAffiliation> <http://www.w3.org/2000/01/rdf-schema#label> "has affiliation"@en .
+# 
+# https://schema.coypu.org/global#hasBranchOffices
+<https://schema.coypu.org/global#hasBranchOffices> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.coypu.org/global#hasBranchOffices> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#hasBranchOffices> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#hasBranchOffices> <http://www.w3.org/2000/01/rdf-schema#comment> "A local or international branch of a company."@en .
+<https://schema.coypu.org/global#hasBranchOffices> <http://www.w3.org/2000/01/rdf-schema#label> "has branch offices"@en .
+# 
+# https://schema.coypu.org/global#hasCityLocation
+<https://schema.coypu.org/global#hasCityLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.coypu.org/global#hasCityLocation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://schema.coypu.org/global#hasLocation> .
+<https://schema.coypu.org/global#hasCityLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://schema.coypu.org/global#hasCityLocation> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.coypu.org/global#City> .
+<https://schema.coypu.org/global#hasCityLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "The city an event, company or critical infrastructure is located at."@en .
+<https://schema.coypu.org/global#hasCityLocation> <http://www.w3.org/2000/01/rdf-schema#label> "has city location"@en .
+# 
+# https://schema.coypu.org/global#hasContinentLocation
+<https://schema.coypu.org/global#hasContinentLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.coypu.org/global#hasContinentLocation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://schema.coypu.org/global#hasLocation> .
+<https://schema.coypu.org/global#hasContinentLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://schema.coypu.org/global#hasContinentLocation> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.coypu.org/global#Continent> .
+<https://schema.coypu.org/global#hasContinentLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "The continent a country, event, company or critical infrastructure is located at."@en .
+<https://schema.coypu.org/global#hasContinentLocation> <http://www.w3.org/2000/01/rdf-schema#label> "has continent location"@en .
+# 
+# https://schema.coypu.org/global#hasCountryLocation
+<https://schema.coypu.org/global#hasCountryLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.coypu.org/global#hasCountryLocation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://schema.coypu.org/global#hasLocation> .
+<https://schema.coypu.org/global#hasCountryLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://schema.coypu.org/global#hasCountryLocation> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.coypu.org/global#Country> .
+<https://schema.coypu.org/global#hasCountryLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "The country a city, event, company or critical infrastructure is located at."@en .
+<https://schema.coypu.org/global#hasCountryLocation> <http://www.w3.org/2000/01/rdf-schema#label> "has country location"@en .
+# 
+# https://schema.coypu.org/global#hasCustomer
+<https://schema.coypu.org/global#hasCustomer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.coypu.org/global#hasCustomer> <http://www.w3.org/2002/07/owl#inverseOf> <https://schema.coypu.org/global#isCustomerOf> .
+<https://schema.coypu.org/global#hasCustomer> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#hasCustomer> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#hasCustomer> <http://www.w3.org/2000/01/rdf-schema#comment> "The company receiving a product, material, resource or service to another company, usually for monetary compensation."@en .
+<https://schema.coypu.org/global#hasCustomer> <http://www.w3.org/2000/01/rdf-schema#label> "has customer"@en .
+# 
+# https://schema.coypu.org/global#hasExiobaseIndustry
+<https://schema.coypu.org/global#hasExiobaseIndustry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.coypu.org/global#hasExiobaseIndustry> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://schema.coypu.org/global#hasIndustry> .
+<https://schema.coypu.org/global#hasExiobaseIndustry> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#RegionalIndustry> .
+<https://schema.coypu.org/global#hasExiobaseIndustry> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.coypu.org/global#ExiobaseIndustry> .
+<https://schema.coypu.org/global#hasExiobaseIndustry> <http://www.w3.org/2000/01/rdf-schema#comment> "The Exiobase industry a regional sector is part of."@en .
+<https://schema.coypu.org/global#hasExiobaseIndustry> <http://www.w3.org/2000/01/rdf-schema#label> "has exiobase industry"@en .
+# 
+# https://schema.coypu.org/global#hasFactory
+<https://schema.coypu.org/global#hasFactory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.coypu.org/global#hasFactory> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#hasFactory> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.coypu.org/global#Factory> .
+<https://schema.coypu.org/global#hasFactory> <http://www.w3.org/2000/01/rdf-schema#comment> "A production site or manufactoring hub of a company."@en .
+<https://schema.coypu.org/global#hasFactory> <http://www.w3.org/2000/01/rdf-schema#label> "has factory"@en .
+# 
+# https://schema.coypu.org/global#hasHeadquarter
+<https://schema.coypu.org/global#hasHeadquarter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.coypu.org/global#hasHeadquarter> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#hasHeadquarter> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#hasHeadquarter> <http://www.w3.org/2000/01/rdf-schema#comment> "The main or singular office of a company."@en .
+<https://schema.coypu.org/global#hasHeadquarter> <http://www.w3.org/2000/01/rdf-schema#label> "has headquarter"@en .
+# 
+# https://schema.coypu.org/global#hasImpactOn
+<https://schema.coypu.org/global#hasImpactOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.coypu.org/global#hasImpactOn> <http://www.w3.org/2002/07/owl#inverseOf> <https://schema.coypu.org/global#isImpactedBy> .
+<https://schema.coypu.org/global#hasImpactOn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Event> .
+<https://schema.coypu.org/global#hasImpactOn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+<https://schema.coypu.org/global#hasImpactOn> <http://www.w3.org/2000/01/rdf-schema#comment> "The thing impacted by an event."@en .
+<https://schema.coypu.org/global#hasImpactOn> <http://www.w3.org/2000/01/rdf-schema#label> "has impact on"@en .
+# 
+# https://schema.coypu.org/global#hasIndustry
+<https://schema.coypu.org/global#hasIndustry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.coypu.org/global#hasIndustry> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.coypu.org/global#Industry> .
+<https://schema.coypu.org/global#hasIndustry> <http://www.w3.org/2000/01/rdf-schema#comment> "The sector or industry a company is active in."@en .
+<https://schema.coypu.org/global#hasIndustry> <http://www.w3.org/2000/01/rdf-schema#label> "has industry"@en .
+# 
+# https://schema.coypu.org/global#hasLegalAffiliation
+<https://schema.coypu.org/global#hasLegalAffiliation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.coypu.org/global#hasLegalAffiliation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://schema.coypu.org/global#hasAffiliation> .
+<https://schema.coypu.org/global#hasLegalAffiliation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#hasLegalAffiliation> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#hasLegalAffiliation> <http://www.w3.org/2000/01/rdf-schema#comment> "A legal relationship between two companies."@en .
+<https://schema.coypu.org/global#hasLegalAffiliation> <http://www.w3.org/2000/01/rdf-schema#label> "has legal affiliation"@en .
+# 
+# https://schema.coypu.org/global#hasLocation
+<https://schema.coypu.org/global#hasLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.coypu.org/global#hasLocation> <http://www.w3.org/2002/07/owl#inverseOf> <https://schema.coypu.org/global#isLocationOf> .
+<https://schema.coypu.org/global#hasLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://schema.coypu.org/global#hasLocation> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.coypu.org/global#Location> .
+<https://schema.coypu.org/global#hasLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "The place an event, company or critical infrastructure is located at."@en .
+<https://schema.coypu.org/global#hasLocation> <http://www.w3.org/2000/01/rdf-schema#label> "has location"@en .
+<https://schema.coypu.org/global#hasLocation> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at> .
+<https://schema.coypu.org/global#hasLocation> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://schema.org/location> .
+# 
+# https://schema.coypu.org/global#hasManagementAffiliation
+<https://schema.coypu.org/global#hasManagementAffiliation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.coypu.org/global#hasManagementAffiliation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://schema.coypu.org/global#hasAffiliation> .
+<https://schema.coypu.org/global#hasManagementAffiliation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#hasManagementAffiliation> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#hasManagementAffiliation> <http://www.w3.org/2000/01/rdf-schema#comment> "A managerial relationship between two companies."@en .
+<https://schema.coypu.org/global#hasManagementAffiliation> <http://www.w3.org/2000/01/rdf-schema#label> "has management affiliation"@en .
+# 
+# https://schema.coypu.org/global#hasOsmElement
+<https://schema.coypu.org/global#hasOsmElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.coypu.org/global#hasOsmElement> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://schema.coypu.org/global#hasOsmElement> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.coypu.org/global#OsmElement> .
+<https://schema.coypu.org/global#hasOsmElement> <http://www.w3.org/2000/01/rdf-schema#label> "has osm element"@en .
+# 
+# https://schema.coypu.org/global#hasProduct
+<https://schema.coypu.org/global#hasProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.coypu.org/global#hasProduct> <http://www.w3.org/2002/07/owl#inverseOf> <https://schema.coypu.org/global#isProductOf> .
+<https://schema.coypu.org/global#hasProduct> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#hasProduct> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.coypu.org/global#Product> .
+<https://schema.coypu.org/global#hasProduct> <http://www.w3.org/2000/01/rdf-schema#comment> "The material, resource or service a company produces."@en .
+<https://schema.coypu.org/global#hasProduct> <http://www.w3.org/2000/01/rdf-schema#label> "has product"@en .
+# 
+# https://schema.coypu.org/global#hasRegionLocation
+<https://schema.coypu.org/global#hasRegionLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.coypu.org/global#hasRegionLocation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://schema.coypu.org/global#hasLocation> .
+<https://schema.coypu.org/global#hasRegionLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://schema.coypu.org/global#hasRegionLocation> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.coypu.org/global#Region> .
+<https://schema.coypu.org/global#hasRegionLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "The region a city, event, company or critical infrastructure is located at."@en .
+<https://schema.coypu.org/global#hasRegionLocation> <http://www.w3.org/2000/01/rdf-schema#label> "has region location"@en .
+# 
+# https://schema.coypu.org/global#hasRequirement
+<https://schema.coypu.org/global#hasRequirement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.coypu.org/global#hasRequirement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#RegionalIndustryCoefficient> .
+<https://schema.coypu.org/global#hasRequirement> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.coypu.org/global#RegionalIndustry> .
+<https://schema.coypu.org/global#hasRequirement> <http://www.w3.org/2000/01/rdf-schema#comment> "The RegionalIndustry which produces a required preliminary product (expressed by it's RegionalIndustryCoefficient), from the Exiobase dataset."@en .
+<https://schema.coypu.org/global#hasRequirement> <http://www.w3.org/2000/01/rdf-schema#label> "has requirement"@en .
+# 
+# https://schema.coypu.org/global#hasSameAddressAffiliation
+<https://schema.coypu.org/global#hasSameAddressAffiliation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.coypu.org/global#hasSameAddressAffiliation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://schema.coypu.org/global#hasAffiliation> .
+<https://schema.coypu.org/global#hasSameAddressAffiliation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#hasSameAddressAffiliation> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#hasSameAddressAffiliation> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship between two companies sharing the same address."@en .
+<https://schema.coypu.org/global#hasSameAddressAffiliation> <http://www.w3.org/2000/01/rdf-schema#label> "has same address affiiation"@en .
+# 
+# https://schema.coypu.org/global#hasSubRegion
+<https://schema.coypu.org/global#hasSubRegion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.coypu.org/global#hasSubRegion> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Location> .
+<https://schema.coypu.org/global#hasSubRegion> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.coypu.org/global#Region> .
+<https://schema.coypu.org/global#hasSubRegion> <http://www.w3.org/2000/01/rdf-schema#comment> "A geographical or administrative subset of a larger region or country."@en .
+<https://schema.coypu.org/global#hasSubRegion> <http://www.w3.org/2000/01/rdf-schema#label> "has sub region"@en .
+# 
+# https://schema.coypu.org/global#hasSupplier
+<https://schema.coypu.org/global#hasSupplier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.coypu.org/global#hasSupplier> <http://www.w3.org/2002/07/owl#inverseOf> <https://schema.coypu.org/global#isSupplierOf> .
+<https://schema.coypu.org/global#hasSupplier> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#hasSupplier> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#hasSupplier> <http://www.w3.org/2000/01/rdf-schema#comment> "The company supplying a product, material, resource or service to another company."@en .
+<https://schema.coypu.org/global#hasSupplier> <http://www.w3.org/2000/01/rdf-schema#label> "has supplier"@en .
+# 
+# https://schema.coypu.org/global#hasTimespan
+<https://schema.coypu.org/global#hasTimespan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.coypu.org/global#hasTimespan> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Event> .
+<https://schema.coypu.org/global#hasTimespan> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.coypu.org/global#Timespan> .
+<https://schema.coypu.org/global#hasTimespan> <http://www.w3.org/2000/01/rdf-schema#comment> "The peroid of duration of an event."@en .
+<https://schema.coypu.org/global#hasTimespan> <http://www.w3.org/2000/01/rdf-schema#label> "has timespan"@en .
+<https://schema.coypu.org/global#hasTimespan> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span> .
+# 
+# https://schema.coypu.org/global#hasWeblinkAffiliation
+<https://schema.coypu.org/global#hasWeblinkAffiliation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.coypu.org/global#hasWeblinkAffiliation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://schema.coypu.org/global#hasAffiliation> .
+<https://schema.coypu.org/global#hasWeblinkAffiliation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#hasWeblinkAffiliation> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#hasWeblinkAffiliation> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship between two companies expressed by a website link."@en .
+<https://schema.coypu.org/global#hasWeblinkAffiliation> <http://www.w3.org/2000/01/rdf-schema#label> "has weblink affiliation"@en .
+# 
+# https://schema.coypu.org/global#hasWikidataEventType
+<https://schema.coypu.org/global#hasWikidataEventType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.coypu.org/global#hasWikidataEventType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://schema.coypu.org/global#hasWikidataEventType> <http://www.w3.org/2000/01/rdf-schema#label> "has wikidata event type"@en .
+# 
+# https://schema.coypu.org/global#isCustomerOf
+<https://schema.coypu.org/global#isCustomerOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.coypu.org/global#isCustomerOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#isCustomerOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#isCustomerOf> <http://www.w3.org/2000/01/rdf-schema#comment> "The company sourcing a product, material, resource or service from another company."@en .
+<https://schema.coypu.org/global#isCustomerOf> <http://www.w3.org/2000/01/rdf-schema#label> "is customer of"@en .
+# 
+# https://schema.coypu.org/global#isIdentifiedBy
+<https://schema.coypu.org/global#isIdentifiedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.coypu.org/global#isIdentifiedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://schema.coypu.org/global#isIdentifiedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+<https://schema.coypu.org/global#isIdentifiedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is identified by"@en .
+<https://schema.coypu.org/global#isIdentifiedBy> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by> .
+# 
+# https://schema.coypu.org/global#isImpactedBy
+<https://schema.coypu.org/global#isImpactedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.coypu.org/global#isImpactedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://schema.coypu.org/global#isImpactedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.coypu.org/global#Event> .
+<https://schema.coypu.org/global#isImpactedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The event impacting a thing."@en .
+<https://schema.coypu.org/global#isImpactedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is impacted by"@en .
+# 
+# https://schema.coypu.org/global#isLocatedIn
+<https://schema.coypu.org/global#isLocatedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.coypu.org/global#isLocatedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://schema.coypu.org/global#isLocatedIn> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.coypu.org/global#Location> .
+<https://schema.coypu.org/global#isLocatedIn> <http://www.w3.org/2000/01/rdf-schema#label> "is located in"@en .
+<https://schema.coypu.org/global#isLocatedIn> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.cidoc-crm.org/cidoc-crm/P89_falls_within> .
+# 
+# https://schema.coypu.org/global#isLocationOf
+<https://schema.coypu.org/global#isLocationOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.coypu.org/global#isLocationOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Location> .
+<https://schema.coypu.org/global#isLocationOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+<https://schema.coypu.org/global#isLocationOf> <http://www.w3.org/2000/01/rdf-schema#comment> "The event, company or critical infrastructure at a certain location."@en .
+<https://schema.coypu.org/global#isLocationOf> <http://www.w3.org/2000/01/rdf-schema#label> "is location of"@en .
+# 
+# https://schema.coypu.org/global#isOccuringDuring
+<https://schema.coypu.org/global#isOccuringDuring> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.coypu.org/global#isOccuringDuring> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://schema.coypu.org/global#isOccuringDuring> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+<https://schema.coypu.org/global#isOccuringDuring> <http://www.w3.org/2000/01/rdf-schema#label> "is occuring during"@en .
+<https://schema.coypu.org/global#isOccuringDuring> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.cidoc-crm.org/cidoc-crm/P117_occurs_during> .
+# 
+# https://schema.coypu.org/global#isPartOf
+<https://schema.coypu.org/global#isPartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.coypu.org/global#isPartOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#isPartOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#isPartOf> <http://www.w3.org/2000/01/rdf-schema#comment> "The concern or group a company is part of."@en .
+<https://schema.coypu.org/global#isPartOf> <http://www.w3.org/2000/01/rdf-schema#label> "is part of"@en .
+# 
+# https://schema.coypu.org/global#isProductOf
+<https://schema.coypu.org/global#isProductOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.coypu.org/global#isProductOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Product> .
+<https://schema.coypu.org/global#isProductOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#isProductOf> <http://www.w3.org/2000/01/rdf-schema#comment> "The company producing a material, resource or service."@en .
+<https://schema.coypu.org/global#isProductOf> <http://www.w3.org/2000/01/rdf-schema#label> "is product of"@en .
+# 
+# https://schema.coypu.org/global#isRequiredBy
+<https://schema.coypu.org/global#isRequiredBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.coypu.org/global#isRequiredBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#RegionalIndustryCoefficient> .
+<https://schema.coypu.org/global#isRequiredBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.coypu.org/global#RegionalIndustry> .
+<https://schema.coypu.org/global#isRequiredBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The RegionalIndustry which requires a preliminary product (expressed by it's RegionalIndustryCoefficient), from the Exiobase dataset."@en .
+<https://schema.coypu.org/global#isRequiredBy> <http://www.w3.org/2000/01/rdf-schema#label> "is required by"@en .
+# 
+# https://schema.coypu.org/global#isSupplierOf
+<https://schema.coypu.org/global#isSupplierOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.coypu.org/global#isSupplierOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#isSupplierOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#isSupplierOf> <http://www.w3.org/2000/01/rdf-schema#comment> "The company supplied with a product, material, resource or service by another company."@en .
+<https://schema.coypu.org/global#isSupplierOf> <http://www.w3.org/2000/01/rdf-schema#label> "is supplier of"@en .
+# 
+# https://schema.coypu.org/global#isUsedIn
+<https://schema.coypu.org/global#isUsedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://schema.coypu.org/global#isUsedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Product> .
+<https://schema.coypu.org/global#isUsedIn> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.coypu.org/global#Product> .
+<https://schema.coypu.org/global#isUsedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "A product, material or resource used in production of another material, resource or product."@en .
+<https://schema.coypu.org/global#isUsedIn> <http://www.w3.org/2000/01/rdf-schema#label> "is used in"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://schema.coypu.org/global#hasActor
+<https://schema.coypu.org/global#hasActor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasActor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasActor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Conflict> .
+<https://schema.coypu.org/global#hasActor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.coypu.org/global#hasActor> <http://www.w3.org/2000/01/rdf-schema#comment> "The named actor involved in the event."@en .
+<https://schema.coypu.org/global#hasActor> <http://www.w3.org/2000/01/rdf-schema#label> "has actor"@en .
+# 
+# https://schema.coypu.org/global#hasAdaptiveCapability
+<https://schema.coypu.org/global#hasAdaptiveCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasAdaptiveCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasAdaptiveCapability> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Country> .
+<https://schema.coypu.org/global#hasAdaptiveCapability> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://schema.coypu.org/global#hasAdaptiveCapability> <http://www.w3.org/2000/01/rdf-schema#comment> "The adaptive capability of a country as defined by Weltrisikobericht."@en .
+<https://schema.coypu.org/global#hasAdaptiveCapability> <http://www.w3.org/2000/01/rdf-schema#label> "has adaptive capability"@en .
+<https://schema.coypu.org/global#hasAdaptiveCapability> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://weltrisikobericht.de> .
+# 
+# https://schema.coypu.org/global#hasAlertScore
+<https://schema.coypu.org/global#hasAlertScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasAlertScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasAlertScore> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Event> .
+<https://schema.coypu.org/global#hasAlertScore> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.coypu.org/global#hasAlertScore> <http://www.w3.org/2000/01/rdf-schema#comment> "The alert level score of an event (eg. 0/1/2 or green/orange/red)."@en .
+<https://schema.coypu.org/global#hasAlertScore> <http://www.w3.org/2000/01/rdf-schema#label> "has alert score"@en .
+# 
+# https://schema.coypu.org/global#hasAlternateName
+<https://schema.coypu.org/global#hasAlternateName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasAlternateName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasAlternateName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://schema.coypu.org/global#hasAlternateName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.coypu.org/global#hasAlternateName> <http://www.w3.org/2000/01/rdf-schema#label> "has alternate name"@en .
+<https://schema.coypu.org/global#hasAlternateName> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://schema.org/alternateName> .
+# 
+# https://schema.coypu.org/global#hasBalanceSheetTotal
+<https://schema.coypu.org/global#hasBalanceSheetTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasBalanceSheetTotal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasBalanceSheetTotal> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#hasBalanceSheetTotal> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://schema.coypu.org/global#hasBalanceSheetTotal> <http://www.w3.org/2000/01/rdf-schema#comment> "The balance sheet total of a company (at a specified date in a specified currency)."@en .
+<https://schema.coypu.org/global#hasBalanceSheetTotal> <http://www.w3.org/2000/01/rdf-schema#label> "has balance sheet total"@en .
+# 
+# https://schema.coypu.org/global#hasCapacity
+<https://schema.coypu.org/global#hasCapacity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasCapacity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasCapacity> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Infrastructure> .
+<https://schema.coypu.org/global#hasCapacity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<https://schema.coypu.org/global#hasCapacity> <http://www.w3.org/2000/01/rdf-schema#comment> "The capacity in tonnes of a facility (eg. ports or airports)."@en .
+<https://schema.coypu.org/global#hasCapacity> <http://www.w3.org/2000/01/rdf-schema#label> "has capacity"@en .
+# 
+# https://schema.coypu.org/global#hasCapital
+<https://schema.coypu.org/global#hasCapital> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasCapital> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasCapital> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#hasCapital> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.coypu.org/global#hasCapital> <http://www.w3.org/2000/01/rdf-schema#comment> "The monetary capital of a company."@en .
+<https://schema.coypu.org/global#hasCapital> <http://www.w3.org/2000/01/rdf-schema#label> "has capital"@en .
+# 
+# https://schema.coypu.org/global#hasCo2Emission
+<https://schema.coypu.org/global#hasCo2Emission> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasCo2Emission> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasCo2Emission> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#RegionalIndustry> .
+<https://schema.coypu.org/global#hasCo2Emission> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://schema.coypu.org/global#hasCo2Emission> <http://www.w3.org/2000/01/rdf-schema#comment> "The CO2 emissions of a regional industry in Gg, from the Exiobase dataset."@en .
+<https://schema.coypu.org/global#hasCo2Emission> <http://www.w3.org/2000/01/rdf-schema#label> "has co2 emission"@en .
+# 
+# https://schema.coypu.org/global#hasCompanySize
+<https://schema.coypu.org/global#hasCompanySize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasCompanySize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasCompanySize> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#hasCompanySize> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.coypu.org/global#hasCompanySize> <http://www.w3.org/2000/01/rdf-schema#comment> "The size of a company according to the EU SME definition."@en .
+<https://schema.coypu.org/global#hasCompanySize> <http://www.w3.org/2000/01/rdf-schema#label> "has company size"@en .
+<https://schema.coypu.org/global#hasCompanySize> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://ec.europa.eu/growth/smes/sme-definition_en> .
+# 
+# https://schema.coypu.org/global#hasCopingCapability
+<https://schema.coypu.org/global#hasCopingCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasCopingCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasCopingCapability> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Country> .
+<https://schema.coypu.org/global#hasCopingCapability> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://schema.coypu.org/global#hasCopingCapability> <http://www.w3.org/2000/01/rdf-schema#comment> "The coping capability of a country as defined by Weltrisikobericht."@en .
+<https://schema.coypu.org/global#hasCopingCapability> <http://www.w3.org/2000/01/rdf-schema#label> "has coping capability"@en .
+<https://schema.coypu.org/global#hasCopingCapability> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://weltrisikobericht.de> .
+# 
+# https://schema.coypu.org/global#hasCpaCode
+<https://schema.coypu.org/global#hasCpaCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasCpaCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasCpaCode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Product> .
+<https://schema.coypu.org/global#hasCpaCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.coypu.org/global#hasCpaCode> <http://www.w3.org/2000/01/rdf-schema#comment> "A product code as defined in CPA."@en .
+<https://schema.coypu.org/global#hasCpaCode> <http://www.w3.org/2000/01/rdf-schema#label> "has cpa code"@en .
+<https://schema.coypu.org/global#hasCpaCode> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://ec.europa.eu/eurostat/web/cpa> .
+# 
+# https://schema.coypu.org/global#hasCreationTimestamp
+<https://schema.coypu.org/global#hasCreationTimestamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasCreationTimestamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasCreationTimestamp> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://schema.coypu.org/global#hasCreationTimestamp> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://schema.coypu.org/global#hasCreationTimestamp> <http://www.w3.org/2000/01/rdf-schema#comment> "The instant of initial creation."@en .
+<https://schema.coypu.org/global#hasCreationTimestamp> <http://www.w3.org/2000/01/rdf-schema#label> "has creation timestamp"@en .
+# 
+# https://schema.coypu.org/global#hasCurrency
+<https://schema.coypu.org/global#hasCurrency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasCurrency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasCurrency> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Country> .
+<https://schema.coypu.org/global#hasCurrency> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://schema.coypu.org/global#hasCurrency> <http://www.w3.org/2000/01/rdf-schema#comment> "The currency of a country or monetary value."@en .
+<https://schema.coypu.org/global#hasCurrency> <http://www.w3.org/2000/01/rdf-schema#label> "has currency"@en .
+<https://schema.coypu.org/global#hasCurrency> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://schema.org/currency> .
+# 
+# https://schema.coypu.org/global#hasCurrentTimestamp
+<https://schema.coypu.org/global#hasCurrentTimestamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasCurrentTimestamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasCurrentTimestamp> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Event> .
+<https://schema.coypu.org/global#hasCurrentTimestamp> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://schema.coypu.org/global#hasCurrentTimestamp> <http://www.w3.org/2000/01/rdf-schema#label> "has current timestamp"@en .
+# 
+# https://schema.coypu.org/global#hasDescription
+<https://schema.coypu.org/global#hasDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://schema.coypu.org/global#hasDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.coypu.org/global#hasDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "The description of a thing."@en .
+<https://schema.coypu.org/global#hasDescription> <http://www.w3.org/2000/01/rdf-schema#label> "has description"@en .
+<https://schema.coypu.org/global#hasDescription> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://schema.org/description> .
+<https://schema.coypu.org/global#hasDescription> <http://www.w3.org/2002/07/owl#deprecated> "Use rdfs:comment instead." .
+# 
+# https://schema.coypu.org/global#hasDissolutionDate
+<https://schema.coypu.org/global#hasDissolutionDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasDissolutionDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasDissolutionDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#hasDissolutionDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://schema.coypu.org/global#hasDissolutionDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The dissolution date of a company."@en .
+<https://schema.coypu.org/global#hasDissolutionDate> <http://www.w3.org/2000/01/rdf-schema#label> "has dissolution date"@en .
+<https://schema.coypu.org/global#hasDissolutionDate> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://schema.org/dissolutionDate> .
+# 
+# https://schema.coypu.org/global#hasEbidCode
+<https://schema.coypu.org/global#hasEbidCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasEbidCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasEbidCode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#hasEbidCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.coypu.org/global#hasEbidCode> <http://www.w3.org/2000/01/rdf-schema#comment> "The European Business Identifier of a company."@en .
+<https://schema.coypu.org/global#hasEbidCode> <http://www.w3.org/2000/01/rdf-schema#label> "has ebid code"@en .
+<https://schema.coypu.org/global#hasEbidCode> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.unternehmensverzeichnis.org> .
+# 
+# https://schema.coypu.org/global#hasEmail
+<https://schema.coypu.org/global#hasEmail> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasEmail> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasEmail> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#hasEmail> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.coypu.org/global#hasEmail> <http://www.w3.org/2000/01/rdf-schema#comment> "A company's email address."@en .
+<https://schema.coypu.org/global#hasEmail> <http://www.w3.org/2000/01/rdf-schema#label> "has email"@en .
+<https://schema.coypu.org/global#hasEmail> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://schema.org/email> .
+# 
+# https://schema.coypu.org/global#hasEndDate
+<https://schema.coypu.org/global#hasEndDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasEndDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasEndDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Event> .
+<https://schema.coypu.org/global#hasEndDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<https://schema.coypu.org/global#hasEndDate> <http://www.w3.org/2000/01/rdf-schema#label> "has end date"@en .
+# 
+# https://schema.coypu.org/global#hasEndTimestamp
+<https://schema.coypu.org/global#hasEndTimestamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasEndTimestamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasEndTimestamp> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Event> .
+<https://schema.coypu.org/global#hasEndTimestamp> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://schema.coypu.org/global#hasEndTimestamp> <http://www.w3.org/2000/01/rdf-schema#label> "has end timestamp"@en .
+# 
+# https://schema.coypu.org/global#hasEventStatus
+<https://schema.coypu.org/global#hasEventStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasEventStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasEventStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Event> .
+<https://schema.coypu.org/global#hasEventStatus> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.coypu.org/global#hasEventStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "The status of an event (eg. current or past)."@en .
+<https://schema.coypu.org/global#hasEventStatus> <http://www.w3.org/2000/01/rdf-schema#label> "has event status"@en .
+# 
+# https://schema.coypu.org/global#hasEventType
+<https://schema.coypu.org/global#hasEventType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasEventType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasEventType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Event> .
+<https://schema.coypu.org/global#hasEventType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.coypu.org/global#hasEventType> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of an event (like earthquake or cyber attack)."@en .
+<https://schema.coypu.org/global#hasEventType> <http://www.w3.org/2000/01/rdf-schema#label> "has event type"@en .
+<https://schema.coypu.org/global#hasEventType> <http://www.w3.org/2002/07/owl#deprecated> "Use rdf:type instead." .
+# 
+# https://schema.coypu.org/global#hasExposure
+<https://schema.coypu.org/global#hasExposure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasExposure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasExposure> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Country> .
+<https://schema.coypu.org/global#hasExposure> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://schema.coypu.org/global#hasExposure> <http://www.w3.org/2000/01/rdf-schema#comment> "The exposure of a country as defined by Weltrisikobericht."@en .
+<https://schema.coypu.org/global#hasExposure> <http://www.w3.org/2000/01/rdf-schema#label> "has exposure"@en .
+<https://schema.coypu.org/global#hasExposure> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://weltrisikobericht.de> .
+# 
+# https://schema.coypu.org/global#hasFatalities
+<https://schema.coypu.org/global#hasFatalities> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasFatalities> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasFatalities> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Conflict> .
+<https://schema.coypu.org/global#hasFatalities> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://schema.coypu.org/global#hasFatalities> <http://www.w3.org/2000/01/rdf-schema#comment> "The number of reported fatalities which occurred during the event."@en .
+<https://schema.coypu.org/global#hasFatalities> <http://www.w3.org/2000/01/rdf-schema#label> "has fatalities"@en .
+# 
+# https://schema.coypu.org/global#hasFax
+<https://schema.coypu.org/global#hasFax> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasFax> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasFax> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#hasFax> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.coypu.org/global#hasFax> <http://www.w3.org/2000/01/rdf-schema#comment> "A company's fax number."@en .
+<https://schema.coypu.org/global#hasFax> <http://www.w3.org/2000/01/rdf-schema#label> "has fax"@en .
+<https://schema.coypu.org/global#hasFax> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://schema.org/faxNumber> .
+# 
+# https://schema.coypu.org/global#hasFoundingDate
+<https://schema.coypu.org/global#hasFoundingDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasFoundingDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasFoundingDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#hasFoundingDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://schema.coypu.org/global#hasFoundingDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The founding date of a company."@en .
+<https://schema.coypu.org/global#hasFoundingDate> <http://www.w3.org/2000/01/rdf-schema#label> "has founding date"@en .
+<https://schema.coypu.org/global#hasFoundingDate> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://schema.org/foundingDate> .
+# 
+# https://schema.coypu.org/global#hasGlideId
+<https://schema.coypu.org/global#hasGlideId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasGlideId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasGlideId> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Disaster> .
+<https://schema.coypu.org/global#hasGlideId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.coypu.org/global#hasGlideId> <http://www.w3.org/2000/01/rdf-schema#comment> "The Global Identifier number of a company."@en .
+<https://schema.coypu.org/global#hasGlideId> <http://www.w3.org/2000/01/rdf-schema#label> "has glide id"@en .
+<https://schema.coypu.org/global#hasGlideId> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://glidenumber.net/> .
+# 
+# https://schema.coypu.org/global#hasHrCourt
+<https://schema.coypu.org/global#hasHrCourt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasHrCourt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasHrCourt> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#hasHrCourt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.coypu.org/global#hasHrCourt> <http://www.w3.org/2000/01/rdf-schema#comment> "The German court where a company is registered."@en .
+<https://schema.coypu.org/global#hasHrCourt> <http://www.w3.org/2000/01/rdf-schema#label> "has hr court"@en .
+# 
+# https://schema.coypu.org/global#hasHrId
+<https://schema.coypu.org/global#hasHrId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasHrId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasHrId> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#hasHrId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.coypu.org/global#hasHrId> <http://www.w3.org/2000/01/rdf-schema#comment> "A German company register id."@en .
+<https://schema.coypu.org/global#hasHrId> <http://www.w3.org/2000/01/rdf-schema#label> "has hr id"@en .
+# 
+# https://schema.coypu.org/global#hasHrType
+<https://schema.coypu.org/global#hasHrType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasHrType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasHrType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#hasHrType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.coypu.org/global#hasHrType> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of a Handelsregisterbekanntmachung (HRA, HRB, AR, GnR, PR or VR)."@en .
+<https://schema.coypu.org/global#hasHrType> <http://www.w3.org/2000/01/rdf-schema#label> "has hr type"@en .
+# 
+# https://schema.coypu.org/global#hasHsCode
+<https://schema.coypu.org/global#hasHsCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasHsCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasHsCode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Product> .
+<https://schema.coypu.org/global#hasHsCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.coypu.org/global#hasHsCode> <http://www.w3.org/2000/01/rdf-schema#comment> "A product code as defined in the EU harmonized system."@en .
+<https://schema.coypu.org/global#hasHsCode> <http://www.w3.org/2000/01/rdf-schema#label> "has hs code"@en .
+# 
+# https://schema.coypu.org/global#hasId
+<https://schema.coypu.org/global#hasId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://schema.coypu.org/global#hasId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.coypu.org/global#hasId> <http://www.w3.org/2000/01/rdf-schema#comment> "A unique identifier, preferably taken from an entity's source dataset."@en .
+<https://schema.coypu.org/global#hasId> <http://www.w3.org/2000/01/rdf-schema#label> "has id"@en .
+<https://schema.coypu.org/global#hasId> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://schema.org/identifier> .
+# 
+# https://schema.coypu.org/global#hasInfrastructureType
+<https://schema.coypu.org/global#hasInfrastructureType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasInfrastructureType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasInfrastructureType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Infrastructure> .
+<https://schema.coypu.org/global#hasInfrastructureType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.coypu.org/global#hasInfrastructureType> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of critical infrastructure (like airport, port or powerplant)."@en .
+<https://schema.coypu.org/global#hasInfrastructureType> <http://www.w3.org/2000/01/rdf-schema#label> "has infrastructure type"@en .
+# 
+# https://schema.coypu.org/global#hasIso2Code
+<https://schema.coypu.org/global#hasIso2Code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasIso2Code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasIso2Code> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://schema.coypu.org/global#hasIso2Code> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.coypu.org/global#hasIso2Code> <http://www.w3.org/2000/01/rdf-schema#comment> "A country code as defined in ISO 3166-2."@en .
+<https://schema.coypu.org/global#hasIso2Code> <http://www.w3.org/2000/01/rdf-schema#label> "has iso code (2 digits)"@en .
+# 
+# https://schema.coypu.org/global#hasIsoCode
+<https://schema.coypu.org/global#hasIsoCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasIsoCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasIsoCode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://schema.coypu.org/global#hasIsoCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.coypu.org/global#hasIsoCode> <http://www.w3.org/2000/01/rdf-schema#comment> "A country code as defined in ISO 3166-3."@en .
+<https://schema.coypu.org/global#hasIsoCode> <http://www.w3.org/2000/01/rdf-schema#label> "has iso code"@en .
+# 
+# https://schema.coypu.org/global#hasIsoNumericalCode
+<https://schema.coypu.org/global#hasIsoNumericalCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasIsoNumericalCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasIsoNumericalCode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://schema.coypu.org/global#hasIsoNumericalCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.coypu.org/global#hasIsoNumericalCode> <http://www.w3.org/2000/01/rdf-schema#comment> "A country code as defined in ISO 3166-1."@en .
+<https://schema.coypu.org/global#hasIsoNumericalCode> <http://www.w3.org/2000/01/rdf-schema#label> "has iso numerical code"@en .
+# 
+# https://schema.coypu.org/global#hasLanguage
+<https://schema.coypu.org/global#hasLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasLanguage> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Country> .
+<https://schema.coypu.org/global#hasLanguage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.coypu.org/global#hasLanguage> <http://www.w3.org/2000/01/rdf-schema#comment> "A language spoken in a country."@en .
+<https://schema.coypu.org/global#hasLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "has language"@en .
+# 
+# https://schema.coypu.org/global#hasLatitude
+<https://schema.coypu.org/global#hasLatitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasLatitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasLatitude> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Location> .
+<https://schema.coypu.org/global#hasLatitude> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://schema.coypu.org/global#hasLatitude> <http://www.w3.org/2000/01/rdf-schema#comment> "A latitude as defined in WGS 84."@en .
+<https://schema.coypu.org/global#hasLatitude> <http://www.w3.org/2000/01/rdf-schema#label> "has latitude"@en .
+<https://schema.coypu.org/global#hasLatitude> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> .
+<https://schema.coypu.org/global#hasLatitude> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://schema.org/latitude> .
+<https://schema.coypu.org/global#hasLatitude> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.geonames.org/ontology#lat> .
+# 
+# https://schema.coypu.org/global#hasLegalForm
+<https://schema.coypu.org/global#hasLegalForm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasLegalForm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasLegalForm> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#hasLegalForm> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.coypu.org/global#hasLegalForm> <http://www.w3.org/2000/01/rdf-schema#comment> "The legal form of a company."@en .
+<https://schema.coypu.org/global#hasLegalForm> <http://www.w3.org/2000/01/rdf-schema#label> "has legal form"@en .
+# 
+# https://schema.coypu.org/global#hasLegalName
+<https://schema.coypu.org/global#hasLegalName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasLegalName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasLegalName> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#hasLegalName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.coypu.org/global#hasLegalName> <http://www.w3.org/2000/01/rdf-schema#comment> "The legal name of a company."@en .
+<https://schema.coypu.org/global#hasLegalName> <http://www.w3.org/2000/01/rdf-schema#label> "has legal name"@en .
+<https://schema.coypu.org/global#hasLegalName> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://schema.org/legalName> .
+# 
+# https://schema.coypu.org/global#hasLeiCode
+<https://schema.coypu.org/global#hasLeiCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasLeiCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasLeiCode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#hasLeiCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.coypu.org/global#hasLeiCode> <http://www.w3.org/2000/01/rdf-schema#comment> "A legal entity identifier as defined in ISO 17442."@en .
+<https://schema.coypu.org/global#hasLeiCode> <http://www.w3.org/2000/01/rdf-schema#label> "has lei code"@en .
+<https://schema.coypu.org/global#hasLeiCode> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://schema.org/leiCode> .
+# 
+# https://schema.coypu.org/global#hasLongitude
+<https://schema.coypu.org/global#hasLongitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasLongitude> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasLongitude> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Location> .
+<https://schema.coypu.org/global#hasLongitude> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://schema.coypu.org/global#hasLongitude> <http://www.w3.org/2000/01/rdf-schema#comment> "A longitude as defined in WGS 84."@en .
+<https://schema.coypu.org/global#hasLongitude> <http://www.w3.org/2000/01/rdf-schema#label> "has longitude"@en .
+<https://schema.coypu.org/global#hasLongitude> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.w3.org/2003/01/geo/wgs84_pos#long> .
+<https://schema.coypu.org/global#hasLongitude> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://schema.org/longitude> .
+<https://schema.coypu.org/global#hasLongitude> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.geonames.org/ontology#long> .
+# 
+# https://schema.coypu.org/global#hasMentionDate
+<https://schema.coypu.org/global#hasMentionDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasMentionDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasMentionDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://schema.coypu.org/global#hasMentionDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<https://schema.coypu.org/global#hasMentionDate> <http://www.w3.org/2000/01/rdf-schema#label> "has mention date"@en .
+# 
+# https://schema.coypu.org/global#hasModificationTimestamp
+<https://schema.coypu.org/global#hasModificationTimestamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasModificationTimestamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasModificationTimestamp> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://schema.coypu.org/global#hasModificationTimestamp> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://schema.coypu.org/global#hasModificationTimestamp> <http://www.w3.org/2000/01/rdf-schema#comment> "The instance of the last modification."@en .
+<https://schema.coypu.org/global#hasModificationTimestamp> <http://www.w3.org/2000/01/rdf-schema#label> "has modification timestamp"@en .
+# 
+# https://schema.coypu.org/global#hasNaceCode
+<https://schema.coypu.org/global#hasNaceCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasNaceCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasNaceCode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://schema.coypu.org/global#hasNaceCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.coypu.org/global#hasNaceCode> <http://www.w3.org/2000/01/rdf-schema#comment> "An industrial sector code as defined in the EU NACE standard."@en .
+<https://schema.coypu.org/global#hasNaceCode> <http://www.w3.org/2000/01/rdf-schema#label> "has nace code"@en .
+# 
+# https://schema.coypu.org/global#hasName
+<https://schema.coypu.org/global#hasName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://schema.coypu.org/global#hasName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.coypu.org/global#hasName> <http://www.w3.org/2000/01/rdf-schema#comment> "The name of a thing."@en .
+<https://schema.coypu.org/global#hasName> <http://www.w3.org/2000/01/rdf-schema#label> "has name"@en .
+<https://schema.coypu.org/global#hasName> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://dbpedia.org/property/name> .
+<https://schema.coypu.org/global#hasName> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://schema.org/name> .
+<https://schema.coypu.org/global#hasName> <http://www.w3.org/2002/07/owl#deprecated> "Use rdfs:label instead." .
+# 
+# https://schema.coypu.org/global#hasNumberOfEmployees
+<https://schema.coypu.org/global#hasNumberOfEmployees> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasNumberOfEmployees> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasNumberOfEmployees> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#hasNumberOfEmployees> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<https://schema.coypu.org/global#hasNumberOfEmployees> <http://www.w3.org/2000/01/rdf-schema#comment> "The number of employees of a company (in a specified year)."@en .
+<https://schema.coypu.org/global#hasNumberOfEmployees> <http://www.w3.org/2000/01/rdf-schema#label> "has number of employees"@en .
+<https://schema.coypu.org/global#hasNumberOfEmployees> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://dbpedia.org/property/numEmployees> .
+<https://schema.coypu.org/global#hasNumberOfEmployees> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://schema.org/numberOfEmployees> .
+# 
+# https://schema.coypu.org/global#hasOngoingSpan
+<https://schema.coypu.org/global#hasOngoingSpan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasOngoingSpan> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://schema.coypu.org/global#hasOngoingSpan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasOngoingSpan> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Timespan> .
+<https://schema.coypu.org/global#hasOngoingSpan> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://schema.coypu.org/global#hasOngoingSpan> <http://www.w3.org/2000/01/rdf-schema#comment> "The timespan denoting an event as ongoing."@en .
+<https://schema.coypu.org/global#hasOngoingSpan> <http://www.w3.org/2000/01/rdf-schema#label> "has ongoing span"@en .
+# 
+# https://schema.coypu.org/global#hasOsmId
+<https://schema.coypu.org/global#hasOsmId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasOsmId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasOsmId> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#OsmElement> .
+<https://schema.coypu.org/global#hasOsmId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://schema.coypu.org/global#hasOsmId> <http://www.w3.org/2000/01/rdf-schema#label> "has osm id"@en .
+# 
+# https://schema.coypu.org/global#hasOsmType
+<https://schema.coypu.org/global#hasOsmType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasOsmType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasOsmType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#OsmElement> .
+<https://schema.coypu.org/global#hasOsmType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.coypu.org/global#hasOsmType> <http://www.w3.org/2000/01/rdf-schema#label> "has osm type"@en .
+# 
+# https://schema.coypu.org/global#hasPercentage
+<https://schema.coypu.org/global#hasPercentage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasPercentage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasPercentage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://schema.coypu.org/global#hasPercentage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://schema.coypu.org/global#hasPercentage> <http://www.w3.org/2000/01/rdf-schema#comment> "a percentage value"@en .
+<https://schema.coypu.org/global#hasPercentage> <http://www.w3.org/2000/01/rdf-schema#label> "has percentage"@en .
+# 
+# https://schema.coypu.org/global#hasPhoneNumber
+<https://schema.coypu.org/global#hasPhoneNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasPhoneNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasPhoneNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#hasPhoneNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.coypu.org/global#hasPhoneNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "A company's phone number (should be normalized)."@en .
+<https://schema.coypu.org/global#hasPhoneNumber> <http://www.w3.org/2000/01/rdf-schema#label> "has phone number"@en .
+<https://schema.coypu.org/global#hasPhoneNumber> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://schema.org/telephone> .
+# 
+# https://schema.coypu.org/global#hasPopulation
+<https://schema.coypu.org/global#hasPopulation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasPopulation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasPopulation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://schema.coypu.org/global#hasPopulation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#positiveInteger> .
+<https://schema.coypu.org/global#hasPopulation> <http://www.w3.org/2000/01/rdf-schema#comment> "The number of people inhabiting a country or city."@en .
+<https://schema.coypu.org/global#hasPopulation> <http://www.w3.org/2000/01/rdf-schema#label> "has population"@en .
+# 
+# https://schema.coypu.org/global#hasPrice
+<https://schema.coypu.org/global#hasPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasPrice> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Product> .
+<https://schema.coypu.org/global#hasPrice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://schema.coypu.org/global#hasPrice> <http://www.w3.org/2000/01/rdf-schema#comment> "The monetary value of a product (at a specified date in a specified currency)."@en .
+<https://schema.coypu.org/global#hasPrice> <http://www.w3.org/2000/01/rdf-schema#label> "has price"@en .
+# 
+# https://schema.coypu.org/global#hasProfit
+<https://schema.coypu.org/global#hasProfit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasProfit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasProfit> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#hasProfit> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://schema.coypu.org/global#hasProfit> <http://www.w3.org/2000/01/rdf-schema#comment> "The profit of a company (for a specified year in a specified currency)."@en .
+<https://schema.coypu.org/global#hasProfit> <http://www.w3.org/2000/01/rdf-schema#label> "has profit"@en .
+# 
+# https://schema.coypu.org/global#hasPublisher
+<https://schema.coypu.org/global#hasPublisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasPublisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasPublisher> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Event> .
+<https://schema.coypu.org/global#hasPublisher> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.coypu.org/global#hasPublisher> <http://www.w3.org/2000/01/rdf-schema#comment> "The originating entity of an event snippet."@en .
+<https://schema.coypu.org/global#hasPublisher> <http://www.w3.org/2000/01/rdf-schema#label> "has publisher"@en .
+# 
+# https://schema.coypu.org/global#hasPurpose
+<https://schema.coypu.org/global#hasPurpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasPurpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasPurpose> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#hasPurpose> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.coypu.org/global#hasPurpose> <http://www.w3.org/2000/01/rdf-schema#comment> "The stated purpose of an organization."@en .
+<https://schema.coypu.org/global#hasPurpose> <http://www.w3.org/2000/01/rdf-schema#label> "has purpose"@en .
+# 
+# https://schema.coypu.org/global#hasRawHtml
+<https://schema.coypu.org/global#hasRawHtml> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasRawHtml> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasRawHtml> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://schema.coypu.org/global#hasRawHtml> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.coypu.org/global#hasRawHtml> <http://www.w3.org/2000/01/rdf-schema#comment> "The HTML code of a web extract."@en .
+<https://schema.coypu.org/global#hasRawHtml> <http://www.w3.org/2000/01/rdf-schema#label> "has raw html"@en .
+# 
+# https://schema.coypu.org/global#hasRequiredQuantity
+<https://schema.coypu.org/global#hasRequiredQuantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasRequiredQuantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasRequiredQuantity> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#RegionalIndustry> .
+<https://schema.coypu.org/global#hasRequiredQuantity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://schema.coypu.org/global#hasRequiredQuantity> <http://www.w3.org/2000/01/rdf-schema#label> "has required quantity"@en .
+# 
+# https://schema.coypu.org/global#hasRevenue
+<https://schema.coypu.org/global#hasRevenue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasRevenue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasRevenue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#hasRevenue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://schema.coypu.org/global#hasRevenue> <http://www.w3.org/2000/01/rdf-schema#comment> "The revenue of a company (for a specified year in a specified currency)."@en .
+<https://schema.coypu.org/global#hasRevenue> <http://www.w3.org/2000/01/rdf-schema#label> "has revenue"@en .
+<https://schema.coypu.org/global#hasRevenue> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://schema.org/yearlyRevenue> .
+# 
+# https://schema.coypu.org/global#hasRiskLevel
+<https://schema.coypu.org/global#hasRiskLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasRiskLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasRiskLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Country> .
+<https://schema.coypu.org/global#hasRiskLevel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://schema.coypu.org/global#hasRiskLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "The risk level of a country as defined by Weltrisikobericht."@en .
+<https://schema.coypu.org/global#hasRiskLevel> <http://www.w3.org/2000/01/rdf-schema#label> "has risk level"@en .
+<https://schema.coypu.org/global#hasRiskLevel> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://weltrisikobericht.de> .
+# 
+# https://schema.coypu.org/global#hasRiskScore
+<https://schema.coypu.org/global#hasRiskScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasRiskScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasRiskScore> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Event> .
+<https://schema.coypu.org/global#hasRiskScore> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://schema.coypu.org/global#hasRiskScore> <http://www.w3.org/2000/01/rdf-schema#label> "has risk score"@en .
+# 
+# https://schema.coypu.org/global#hasSocialMediaUrl
+<https://schema.coypu.org/global#hasSocialMediaUrl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasSocialMediaUrl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasSocialMediaUrl> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#hasSocialMediaUrl> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://schema.coypu.org/global#hasSocialMediaUrl> <http://www.w3.org/2000/01/rdf-schema#comment> "A company's social media profile identifier."@en .
+<https://schema.coypu.org/global#hasSocialMediaUrl> <http://www.w3.org/2000/01/rdf-schema#label> "has social media url"@en .
+# 
+# https://schema.coypu.org/global#hasSource
+<https://schema.coypu.org/global#hasSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasSource> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> .
+<https://schema.coypu.org/global#hasSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasSource> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://schema.coypu.org/global#hasSource> <http://www.w3.org/2000/01/rdf-schema#comment> "The source IRI, URL or dataset of an entity."@en .
+<https://schema.coypu.org/global#hasSource> <http://www.w3.org/2000/01/rdf-schema#label> "has source"@en .
+# 
+# https://schema.coypu.org/global#hasStartDate
+<https://schema.coypu.org/global#hasStartDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasStartDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasStartDate> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Event> .
+<https://schema.coypu.org/global#hasStartDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<https://schema.coypu.org/global#hasStartDate> <http://www.w3.org/2000/01/rdf-schema#label> "has start date"@en .
+# 
+# https://schema.coypu.org/global#hasStartTimestamp
+<https://schema.coypu.org/global#hasStartTimestamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasStartTimestamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasStartTimestamp> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Event> .
+<https://schema.coypu.org/global#hasStartTimestamp> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://schema.coypu.org/global#hasStartTimestamp> <http://www.w3.org/2000/01/rdf-schema#label> "has start timestamp"@en .
+# 
+# https://schema.coypu.org/global#hasStreet
+<https://schema.coypu.org/global#hasStreet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasStreet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasStreet> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#hasStreet> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.coypu.org/global#hasStreet> <http://www.w3.org/2000/01/rdf-schema#comment> "A street address."@en .
+<https://schema.coypu.org/global#hasStreet> <http://www.w3.org/2000/01/rdf-schema#label> "has street"@en .
+<https://schema.coypu.org/global#hasStreet> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://schema.org/streetAddress> .
+# 
+# https://schema.coypu.org/global#hasSusceptibility
+<https://schema.coypu.org/global#hasSusceptibility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasSusceptibility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasSusceptibility> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Country> .
+<https://schema.coypu.org/global#hasSusceptibility> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://schema.coypu.org/global#hasSusceptibility> <http://www.w3.org/2000/01/rdf-schema#comment> "The susceptibility of a country as defined by Weltrisikobericht."@en .
+<https://schema.coypu.org/global#hasSusceptibility> <http://www.w3.org/2000/01/rdf-schema#label> "has susceptibility"@en .
+<https://schema.coypu.org/global#hasSusceptibility> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://weltrisikobericht.de> .
+# 
+# https://schema.coypu.org/global#hasTag
+<https://schema.coypu.org/global#hasTag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasTag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasTag> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://schema.coypu.org/global#hasTag> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.coypu.org/global#hasTag> <http://www.w3.org/2000/01/rdf-schema#comment> "A tag used for grouping and sorting (like \"corona\" or \"covid-19\")."@en .
+<https://schema.coypu.org/global#hasTag> <http://www.w3.org/2000/01/rdf-schema#label> "has tag"@en .
+# 
+# https://schema.coypu.org/global#hasTimestamp
+<https://schema.coypu.org/global#hasTimestamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasTimestamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasTimestamp> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Event> .
+<https://schema.coypu.org/global#hasTimestamp> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://schema.coypu.org/global#hasTimestamp> <http://www.w3.org/2000/01/rdf-schema#comment> "The instant an event happened or was processed."@en .
+<https://schema.coypu.org/global#hasTimestamp> <http://www.w3.org/2000/01/rdf-schema#label> "has timestamp"@en .
+# 
+# https://schema.coypu.org/global#hasTransportNetwork
+<https://schema.coypu.org/global#hasTransportNetwork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasTransportNetwork> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Infrastructure> .
+<https://schema.coypu.org/global#hasTransportNetwork> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.coypu.org/global#hasTransportNetwork> <http://www.w3.org/2000/01/rdf-schema#comment> "A network the infrastructure is a part of. A transport network usually comprises a system of routes typically maintained or designated by a single agency or organization."@en .
+<https://schema.coypu.org/global#hasTransportNetwork> <http://www.w3.org/2000/01/rdf-schema#label> "has transport network"@en .
+# 
+# https://schema.coypu.org/global#hasUnit
+<https://schema.coypu.org/global#hasUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasUnit> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://schema.coypu.org/global#hasUnit> <http://www.w3.org/2000/01/rdf-schema#label> "has unit"@en .
+# 
+# https://schema.coypu.org/global#hasUrl
+<https://schema.coypu.org/global#hasUrl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasUrl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasUrl> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://schema.coypu.org/global#hasUrl> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://schema.coypu.org/global#hasUrl> <http://www.w3.org/2000/01/rdf-schema#comment> "The IRI of a web resource."@en .
+<https://schema.coypu.org/global#hasUrl> <http://www.w3.org/2000/01/rdf-schema#label> "has url"@en .
+<https://schema.coypu.org/global#hasUrl> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://dbpedia.org/property/website> .
+<https://schema.coypu.org/global#hasUrl> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://schema.org/url> .
+# 
+# https://schema.coypu.org/global#hasValue
+<https://schema.coypu.org/global#hasValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://schema.coypu.org/global#hasValue> <http://www.w3.org/2000/01/rdf-schema#label> "has value"@en .
+# 
+# https://schema.coypu.org/global#hasVat
+<https://schema.coypu.org/global#hasVat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasVat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasVat> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#hasVat> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.coypu.org/global#hasVat> <http://www.w3.org/2000/01/rdf-schema#comment> "The VAT ID of a company."@en .
+<https://schema.coypu.org/global#hasVat> <http://www.w3.org/2000/01/rdf-schema#label> "has vat"@en .
+<https://schema.coypu.org/global#hasVat> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://schema.org/vatID> .
+# 
+# https://schema.coypu.org/global#hasVolatility
+<https://schema.coypu.org/global#hasVolatility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasVolatility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasVolatility> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Product> .
+<https://schema.coypu.org/global#hasVolatility> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://schema.coypu.org/global#hasVolatility> <http://www.w3.org/2000/01/rdf-schema#comment> "The volatility of a product price (at a specified date)."@en .
+<https://schema.coypu.org/global#hasVolatility> <http://www.w3.org/2000/01/rdf-schema#label> "has volatility"@en .
+# 
+# https://schema.coypu.org/global#hasVulnerability
+<https://schema.coypu.org/global#hasVulnerability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasVulnerability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasVulnerability> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Country> .
+<https://schema.coypu.org/global#hasVulnerability> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://schema.coypu.org/global#hasVulnerability> <http://www.w3.org/2000/01/rdf-schema#comment> "The vulnerability of a country as defined by Weltrisikobericht."@en .
+<https://schema.coypu.org/global#hasVulnerability> <http://www.w3.org/2000/01/rdf-schema#label> "has vulnerability"@en .
+<https://schema.coypu.org/global#hasVulnerability> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://weltrisikobericht.de> .
+# 
+# https://schema.coypu.org/global#hasYear
+<https://schema.coypu.org/global#hasYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasYear> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
+<https://schema.coypu.org/global#hasYear> <http://www.w3.org/2000/01/rdf-schema#label> "has year"@en .
+# 
+# https://schema.coypu.org/global#hasZip
+<https://schema.coypu.org/global#hasZip> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#hasZip> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#hasZip> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#hasZip> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://schema.coypu.org/global#hasZip> <http://www.w3.org/2000/01/rdf-schema#comment> "The ZIP code of an address."@en .
+<https://schema.coypu.org/global#hasZip> <http://www.w3.org/2000/01/rdf-schema#label> "has zip"@en .
+<https://schema.coypu.org/global#hasZip> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://schema.org/postalCode> .
+# 
+# https://schema.coypu.org/global#isActive
+<https://schema.coypu.org/global#isActive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://schema.coypu.org/global#isActive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://schema.coypu.org/global#isActive> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#isActive> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://schema.coypu.org/global#isActive> <http://www.w3.org/2000/01/rdf-schema#comment> "The economic status of a company (active or inactive)."@en .
+<https://schema.coypu.org/global#isActive> <http://www.w3.org/2000/01/rdf-schema#label> "is active"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://schema.coypu.org/global#AbductionOrForcedDisappearance
+<https://schema.coypu.org/global#AbductionOrForcedDisappearance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#AbductionOrForcedDisappearance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#ViolenceAgainstCivilians> .
+<https://schema.coypu.org/global#AbductionOrForcedDisappearance> <http://www.w3.org/2000/01/rdf-schema#label> "Abduction or forced disappearance"@en .
+# 
+# https://schema.coypu.org/global#AdministrativeRegion
+<https://schema.coypu.org/global#AdministrativeRegion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#AdministrativeRegion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Region> .
+<https://schema.coypu.org/global#AdministrativeRegion> <http://www.w3.org/2000/01/rdf-schema#label> "AdministrativeRegion"@en .
+# 
+# https://schema.coypu.org/global#Agreement
+<https://schema.coypu.org/global#Agreement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#Agreement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#StrategicDevelopment> .
+<https://schema.coypu.org/global#Agreement> <http://www.w3.org/2000/01/rdf-schema#label> "Agreement"@en .
+# 
+# https://schema.coypu.org/global#AirOrDroneStrike
+<https://schema.coypu.org/global#AirOrDroneStrike> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#AirOrDroneStrike> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#ExplosionOrRemoteViolence> .
+<https://schema.coypu.org/global#AirOrDroneStrike> <http://www.w3.org/2000/01/rdf-schema#label> "Air or drone strike"@en .
+# 
+# https://schema.coypu.org/global#Airport
+<https://schema.coypu.org/global#Airport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#Airport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Infrastructure> .
+<https://schema.coypu.org/global#Airport> <http://www.w3.org/2000/01/rdf-schema#comment> "A logistics hub for air freight."@en .
+<https://schema.coypu.org/global#Airport> <http://www.w3.org/2000/01/rdf-schema#label> "Airport"@en .
+<https://schema.coypu.org/global#Airport> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.wikidata.org/entity/Q1248784> .
+# 
+# https://schema.coypu.org/global#ArmedClash
+<https://schema.coypu.org/global#ArmedClash> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#ArmedClash> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Battle> .
+<https://schema.coypu.org/global#ArmedClash> <http://www.w3.org/2000/01/rdf-schema#label> "Armed clash"@en .
+# 
+# https://schema.coypu.org/global#Arrests
+<https://schema.coypu.org/global#Arrests> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#Arrests> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#StrategicDevelopment> .
+<https://schema.coypu.org/global#Arrests> <http://www.w3.org/2000/01/rdf-schema#label> "Arrests"@en .
+# 
+# https://schema.coypu.org/global#ArticleTopic
+<https://schema.coypu.org/global#ArticleTopic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#ArticleTopic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#TextTopic> .
+<https://schema.coypu.org/global#ArticleTopic> <http://www.w3.org/2000/01/rdf-schema#label> "ArticleTopic"@en .
+# 
+# https://schema.coypu.org/global#Attack
+<https://schema.coypu.org/global#Attack> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#Attack> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#ViolenceAgainstCivilians> .
+<https://schema.coypu.org/global#Attack> <http://www.w3.org/2000/01/rdf-schema#label> "Attack"@en .
+# 
+# https://schema.coypu.org/global#Battle
+<https://schema.coypu.org/global#Battle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#Battle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#ViolentEvent> .
+<https://schema.coypu.org/global#Battle> <http://www.w3.org/2000/01/rdf-schema#comment> "A violent interaction between two politically organized armed groups at a particular time and location."@en .
+<https://schema.coypu.org/global#Battle> <http://www.w3.org/2000/01/rdf-schema#label> "Battle"@en .
+# 
+# https://schema.coypu.org/global#ChangeToGroupOrActivity
+<https://schema.coypu.org/global#ChangeToGroupOrActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#ChangeToGroupOrActivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#StrategicDevelopment> .
+<https://schema.coypu.org/global#ChangeToGroupOrActivity> <http://www.w3.org/2000/01/rdf-schema#label> "Change to group or activity"@en .
+# 
+# https://schema.coypu.org/global#ChemicalWeapon
+<https://schema.coypu.org/global#ChemicalWeapon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#ChemicalWeapon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#ExplosionOrRemoteViolence> .
+<https://schema.coypu.org/global#ChemicalWeapon> <http://www.w3.org/2000/01/rdf-schema#comment> "all substances listed in the Schedule 1 of the Chemical Weapons Convention"@en .
+<https://schema.coypu.org/global#ChemicalWeapon> <http://www.w3.org/2000/01/rdf-schema#label> "Chemical weapon"@en .
+# 
+# https://schema.coypu.org/global#City
+<https://schema.coypu.org/global#City> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#City> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Location> .
+<https://schema.coypu.org/global#City> <http://www.w3.org/2000/01/rdf-schema#comment> "A center of population, commerce, and culture; a town of significant size and importance."@en .
+<https://schema.coypu.org/global#City> <http://www.w3.org/2000/01/rdf-schema#label> "City"@en .
+<https://schema.coypu.org/global#City> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.wikidata.org/entity/Q515> .
+<https://schema.coypu.org/global#City> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://dbpedia.org/ontology/City> .
+<https://schema.coypu.org/global#City> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://schema.org/City> .
+# 
+# https://schema.coypu.org/global#Civilians
+<https://schema.coypu.org/global#Civilians> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#Civilians> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#ViolenceAgainstCivilians> .
+<https://schema.coypu.org/global#Civilians> <http://www.w3.org/2000/01/rdf-schema#label> "Civilians"@en .
+# 
+# https://schema.coypu.org/global#Commodity
+<https://schema.coypu.org/global#Commodity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#Commodity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Product> .
+<https://schema.coypu.org/global#Commodity> <http://www.w3.org/2000/01/rdf-schema#comment> "A commodity good or production material."@en .
+<https://schema.coypu.org/global#Commodity> <http://www.w3.org/2000/01/rdf-schema#label> "Commodity"@en .
+<https://schema.coypu.org/global#Commodity> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.wikidata.org/entity/Q317088> .
+# 
+# https://schema.coypu.org/global#Company
+<https://schema.coypu.org/global#Company> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#Company> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<https://schema.coypu.org/global#Company> <http://www.w3.org/2000/01/rdf-schema#comment> "An organization engaged in economic activities."@en .
+<https://schema.coypu.org/global#Company> <http://www.w3.org/2000/01/rdf-schema#label> "Company"@en .
+<https://schema.coypu.org/global#Company> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://dbpedia.org/ontology/Company> .
+<https://schema.coypu.org/global#Company> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.wikidata.org/entity/Q783794> .
+<https://schema.coypu.org/global#Company> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://schema.org/Corporation> .
+# 
+# https://schema.coypu.org/global#Conflict
+<https://schema.coypu.org/global#Conflict> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#Conflict> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Event> .
+<https://schema.coypu.org/global#Conflict> <http://www.w3.org/2000/01/rdf-schema#comment> "An event of disagreement or disharmony between organizations, persons or ideas."@en .
+<https://schema.coypu.org/global#Conflict> <http://www.w3.org/2000/01/rdf-schema#label> "Conflict"@en .
+# 
+# https://schema.coypu.org/global#Continent
+<https://schema.coypu.org/global#Continent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#Continent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Location> .
+<https://schema.coypu.org/global#Continent> <http://www.w3.org/2000/01/rdf-schema#comment> "A large landmass of the globe, usually comprising several countries."@en .
+<https://schema.coypu.org/global#Continent> <http://www.w3.org/2000/01/rdf-schema#label> "Continent"@en .
+<https://schema.coypu.org/global#Continent> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://schema.org/Continent> .
+# 
+# https://schema.coypu.org/global#Country
+<https://schema.coypu.org/global#Country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#Country> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Location> .
+<https://schema.coypu.org/global#Country> <http://www.w3.org/2000/01/rdf-schema#comment> "The territory under jurisdiction of a nation state."@en .
+<https://schema.coypu.org/global#Country> <http://www.w3.org/2000/01/rdf-schema#label> "Country"@en .
+<https://schema.coypu.org/global#Country> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://dbpedia.org/ontology/Country> .
+<https://schema.coypu.org/global#Country> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://schema.org/Country> .
+# 
+# https://schema.coypu.org/global#CountryStatistic
+<https://schema.coypu.org/global#CountryStatistic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#CountryStatistic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Feature> .
+<https://schema.coypu.org/global#CountryStatistic> <http://www.w3.org/2000/01/rdf-schema#comment> "An annotation for the United Nations Sustainable Development Goals dataset."@en .
+<https://schema.coypu.org/global#CountryStatistic> <http://www.w3.org/2000/01/rdf-schema#label> "CountryStatistic"@en .
+# 
+# https://schema.coypu.org/global#Customer
+<https://schema.coypu.org/global#Customer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#Customer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#Customer> <http://www.w3.org/2000/01/rdf-schema#comment> "An organization that sources something needed such as a product or service from another organization."@en .
+<https://schema.coypu.org/global#Customer> <http://www.w3.org/2000/01/rdf-schema#label> "Customer"@en .
+# 
+# https://schema.coypu.org/global#Demonstration
+<https://schema.coypu.org/global#Demonstration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#Demonstration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Conflict> .
+<https://schema.coypu.org/global#Demonstration> <http://www.w3.org/2000/01/rdf-schema#label> "Demonstration"@en .
+# 
+# https://schema.coypu.org/global#Disaster
+<https://schema.coypu.org/global#Disaster> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#Disaster> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Event> .
+<https://schema.coypu.org/global#Disaster> <http://www.w3.org/2000/01/rdf-schema#comment> "An occurrence causing widespread destruction and distress."@en .
+<https://schema.coypu.org/global#Disaster> <http://www.w3.org/2000/01/rdf-schema#label> "Disaster"@en .
+<https://schema.coypu.org/global#Disaster> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.wikidata.org/entity/Q3839081> .
+<https://schema.coypu.org/global#Disaster> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.emdat.be/guidelines> .
+# 
+# https://schema.coypu.org/global#DisruptedWeaponsUse
+<https://schema.coypu.org/global#DisruptedWeaponsUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#DisruptedWeaponsUse> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#StrategicDevelopment> .
+<https://schema.coypu.org/global#DisruptedWeaponsUse> <http://www.w3.org/2000/01/rdf-schema#label> "Disrupted weapons use"@en .
+# 
+# https://schema.coypu.org/global#Event
+<https://schema.coypu.org/global#Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<https://schema.coypu.org/global#Event> <http://www.w3.org/2000/01/rdf-schema#comment> "An event related to a specific location with a singular occurence."@en .
+<https://schema.coypu.org/global#Event> <http://www.w3.org/2000/01/rdf-schema#label> "Event"@en .
+<https://schema.coypu.org/global#Event> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.cidoc-crm.org/cidoc-crm/E5_Event> .
+<https://schema.coypu.org/global#Event> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://dbpedia.org/ontology/Event> .
+<https://schema.coypu.org/global#Event> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://schema.org/Event> .
+# 
+# https://schema.coypu.org/global#ExcessiveForceAgainstProtesters
+<https://schema.coypu.org/global#ExcessiveForceAgainstProtesters> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#ExcessiveForceAgainstProtesters> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Protest> .
+<https://schema.coypu.org/global#ExcessiveForceAgainstProtesters> <http://www.w3.org/2000/01/rdf-schema#label> "Excessive force against protesters"@en .
+# 
+# https://schema.coypu.org/global#ExiobaseIndustry
+<https://schema.coypu.org/global#ExiobaseIndustry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#ExiobaseIndustry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Industry> .
+<https://schema.coypu.org/global#ExiobaseIndustry> <http://www.w3.org/2000/01/rdf-schema#comment> "An economic sector from the Exiobase dataset."@en .
+<https://schema.coypu.org/global#ExiobaseIndustry> <http://www.w3.org/2000/01/rdf-schema#label> "ExiobaseIndustry"@en .
+# 
+# https://schema.coypu.org/global#ExplosionOrRemoteViolence
+<https://schema.coypu.org/global#ExplosionOrRemoteViolence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#ExplosionOrRemoteViolence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#ViolentEvent> .
+<https://schema.coypu.org/global#ExplosionOrRemoteViolence> <http://www.w3.org/2000/01/rdf-schema#comment> "A one-sided violent event in which the tool for engaging in conflict creates asymmetry by taking away the ability of the target to respond."@en .
+<https://schema.coypu.org/global#ExplosionOrRemoteViolence> <http://www.w3.org/2000/01/rdf-schema#label> "Explosion or remote violence"@en .
+# 
+# https://schema.coypu.org/global#Factory
+<https://schema.coypu.org/global#Factory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#Factory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Infrastructure> .
+<https://schema.coypu.org/global#Factory> <http://www.w3.org/2000/01/rdf-schema#comment> "A factory or production site."@en .
+<https://schema.coypu.org/global#Factory> <http://www.w3.org/2000/01/rdf-schema#label> "Factory"@en .
+<https://schema.coypu.org/global#Factory> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.wikidata.org/entity/Q83405> .
+# 
+# https://schema.coypu.org/global#Feature
+<https://schema.coypu.org/global#Feature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#Feature> <http://www.w3.org/2000/01/rdf-schema#comment> "An annotation or reification class for specific datasets."@en .
+<https://schema.coypu.org/global#Feature> <http://www.w3.org/2000/01/rdf-schema#label> "Feature"@en .
+# 
+# https://schema.coypu.org/global#GovernmentRegainsTerritory
+<https://schema.coypu.org/global#GovernmentRegainsTerritory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#GovernmentRegainsTerritory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Battle> .
+<https://schema.coypu.org/global#GovernmentRegainsTerritory> <http://www.w3.org/2000/01/rdf-schema#label> "Government regains territory"@en .
+# 
+# https://schema.coypu.org/global#Grenade
+<https://schema.coypu.org/global#Grenade> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#Grenade> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#ExplosionOrRemoteViolence> .
+<https://schema.coypu.org/global#Grenade> <http://www.w3.org/2000/01/rdf-schema#label> "Grenade"@en .
+# 
+# https://schema.coypu.org/global#HeadquartersOrBaseEstablished
+<https://schema.coypu.org/global#HeadquartersOrBaseEstablished> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#HeadquartersOrBaseEstablished> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#StrategicDevelopment> .
+<https://schema.coypu.org/global#HeadquartersOrBaseEstablished> <http://www.w3.org/2000/01/rdf-schema#label> "Headquarters or base established"@en .
+# 
+# https://schema.coypu.org/global#Industry
+<https://schema.coypu.org/global#Industry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#Industry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<https://schema.coypu.org/global#Industry> <http://www.w3.org/2000/01/rdf-schema#comment> "An industry or economic sector."@en .
+<https://schema.coypu.org/global#Industry> <http://www.w3.org/2000/01/rdf-schema#label> "Industry"@en .
+<https://schema.coypu.org/global#Industry> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.wikidata.org/entity/Q8148> .
+<https://schema.coypu.org/global#Industry> <http://www.w3.org/2004/02/skos/core#prefLabel> "Sector"@en .
+# 
+# https://schema.coypu.org/global#Infrastructure
+<https://schema.coypu.org/global#Infrastructure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#Infrastructure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<https://schema.coypu.org/global#Infrastructure> <http://www.w3.org/2000/01/rdf-schema#comment> "A facility providing critical infrastructure for production or logistics."@en .
+<https://schema.coypu.org/global#Infrastructure> <http://www.w3.org/2000/01/rdf-schema#label> "Infrastructure"@en .
+<https://schema.coypu.org/global#Infrastructure> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.wikidata.org/entity/Q121359> .
+# 
+# https://schema.coypu.org/global#InternationalOrganization
+<https://schema.coypu.org/global#InternationalOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#InternationalOrganization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Feature> .
+<https://schema.coypu.org/global#InternationalOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "A multinational conglomerate, a supranational state actor or a cross-border non-governmental organization."@en .
+<https://schema.coypu.org/global#InternationalOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "InternationalOrganization"@en .
+# 
+# https://schema.coypu.org/global#Location
+<https://schema.coypu.org/global#Location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#Location> <http://www.w3.org/2000/01/rdf-schema#comment> "A place on the globe."@en .
+<https://schema.coypu.org/global#Location> <http://www.w3.org/2000/01/rdf-schema#label> "Location"@en .
+<https://schema.coypu.org/global#Location> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://raw.githubusercontent.com/beAWARE-project/ontology/master/beAWARE_ontology#Location> .
+# 
+# https://schema.coypu.org/global#LootingOrPropertyDestruction
+<https://schema.coypu.org/global#LootingOrPropertyDestruction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#LootingOrPropertyDestruction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#StrategicDevelopment> .
+<https://schema.coypu.org/global#LootingOrPropertyDestruction> <http://www.w3.org/2000/01/rdf-schema#label> "Looting or property destruction"@en .
+# 
+# https://schema.coypu.org/global#Material
+<https://schema.coypu.org/global#Material> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#Material> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Product> .
+<https://schema.coypu.org/global#Material> <http://www.w3.org/2000/01/rdf-schema#comment> "A substance or resource which is required for producing other goods."@en .
+<https://schema.coypu.org/global#Material> <http://www.w3.org/2000/01/rdf-schema#label> "Material"@en .
+<https://schema.coypu.org/global#Material> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.wikidata.org/entity/Q214609> .
+# 
+# https://schema.coypu.org/global#Mine
+<https://schema.coypu.org/global#Mine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#Mine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Infrastructure> .
+<https://schema.coypu.org/global#Mine> <http://www.w3.org/2000/01/rdf-schema#comment> "An extraction site for natural resources, like copper, iron or bauxite."@en .
+<https://schema.coypu.org/global#Mine> <http://www.w3.org/2000/01/rdf-schema#label> "Mine"@en .
+# 
+# https://schema.coypu.org/global#MobViolence
+<https://schema.coypu.org/global#MobViolence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#MobViolence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Riot> .
+<https://schema.coypu.org/global#MobViolence> <http://www.w3.org/2000/01/rdf-schema#label> "Mob violence"@en .
+# 
+# https://schema.coypu.org/global#News
+<https://schema.coypu.org/global#News> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#News> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Event> .
+<https://schema.coypu.org/global#News> <http://www.w3.org/2000/01/rdf-schema#comment> "A newspaper article, social media posting or press release."@en .
+<https://schema.coypu.org/global#News> <http://www.w3.org/2000/01/rdf-schema#label> "News"@en .
+<https://schema.coypu.org/global#News> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.wikidata.org/entity/Q38926> .
+# 
+# https://schema.coypu.org/global#NewsSummary
+<https://schema.coypu.org/global#NewsSummary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#NewsSummary> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#WikiNews> .
+<https://schema.coypu.org/global#NewsSummary> <http://www.w3.org/2000/01/rdf-schema#label> "NewsSummary"@en .
+# 
+# https://schema.coypu.org/global#NonStateActorOvertakesTerritory
+<https://schema.coypu.org/global#NonStateActorOvertakesTerritory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#NonStateActorOvertakesTerritory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Battle> .
+<https://schema.coypu.org/global#NonStateActorOvertakesTerritory> <http://www.w3.org/2000/01/rdf-schema#label> "Non-state actor overtakes territory"@en .
+# 
+# https://schema.coypu.org/global#NonViolentAction
+<https://schema.coypu.org/global#NonViolentAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#NonViolentAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Conflict> .
+<https://schema.coypu.org/global#NonViolentAction> <http://www.w3.org/2000/01/rdf-schema#label> "NonViolentAction"@en .
+# 
+# https://schema.coypu.org/global#NonViolentTransferOfTerritory
+<https://schema.coypu.org/global#NonViolentTransferOfTerritory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#NonViolentTransferOfTerritory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#StrategicDevelopment> .
+<https://schema.coypu.org/global#NonViolentTransferOfTerritory> <http://www.w3.org/2000/01/rdf-schema#label> "Non-violent transfer of territory"@en .
+# 
+# https://schema.coypu.org/global#OsmElement
+<https://schema.coypu.org/global#OsmElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#OsmElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Feature> .
+<https://schema.coypu.org/global#OsmElement> <http://www.w3.org/2000/01/rdf-schema#comment> "An Open Street Map reference."@en .
+<https://schema.coypu.org/global#OsmElement> <http://www.w3.org/2000/01/rdf-schema#label> "OsmElement"@en .
+# 
+# https://schema.coypu.org/global#Other
+<https://schema.coypu.org/global#Other> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#Other> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#StrategicDevelopment> .
+<https://schema.coypu.org/global#Other> <http://www.w3.org/2000/01/rdf-schema#label> "Other"@en .
+# 
+# https://schema.coypu.org/global#PeacefulProtest
+<https://schema.coypu.org/global#PeacefulProtest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#PeacefulProtest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Protest> .
+<https://schema.coypu.org/global#PeacefulProtest> <http://www.w3.org/2000/01/rdf-schema#label> "Peaceful protest"@en .
+# 
+# https://schema.coypu.org/global#Pipeline
+<https://schema.coypu.org/global#Pipeline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#Pipeline> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Infrastructure> .
+<https://schema.coypu.org/global#Pipeline> <http://www.w3.org/2000/01/rdf-schema#comment> "A gas, oil or hydrogen pipeline."@en .
+<https://schema.coypu.org/global#Pipeline> <http://www.w3.org/2000/01/rdf-schema#label> "Pipeline"@en .
+# 
+# https://schema.coypu.org/global#Port
+<https://schema.coypu.org/global#Port> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#Port> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Infrastructure> .
+<https://schema.coypu.org/global#Port> <http://www.w3.org/2000/01/rdf-schema#comment> "A logictics hub for shipping."@en .
+<https://schema.coypu.org/global#Port> <http://www.w3.org/2000/01/rdf-schema#label> "Port"@en .
+<https://schema.coypu.org/global#Port> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.wikidata.org/entity/Q44782> .
+# 
+# https://schema.coypu.org/global#Powerplant
+<https://schema.coypu.org/global#Powerplant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#Powerplant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Infrastructure> .
+<https://schema.coypu.org/global#Powerplant> <http://www.w3.org/2000/01/rdf-schema#comment> "A facility for generating electric power."@en .
+<https://schema.coypu.org/global#Powerplant> <http://www.w3.org/2000/01/rdf-schema#label> "Powerplant"@en .
+<https://schema.coypu.org/global#Powerplant> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.wikidata.org/entity/Q159719> .
+# 
+# https://schema.coypu.org/global#Product
+<https://schema.coypu.org/global#Product> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#Product> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<https://schema.coypu.org/global#Product> <http://www.w3.org/2000/01/rdf-schema#comment> "Any tangible output or service that is a result of a process and that is intended for delivery to a customer or end user based on the HS classification scheme."@en .
+<https://schema.coypu.org/global#Product> <http://www.w3.org/2000/01/rdf-schema#label> "Product"@en .
+<https://schema.coypu.org/global#Product> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://dbpedia.org/resource/Material> .
+<https://schema.coypu.org/global#Product> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://schema.org/Product> .
+# 
+# https://schema.coypu.org/global#Protest
+<https://schema.coypu.org/global#Protest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#Protest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Demonstration> .
+<https://schema.coypu.org/global#Protest> <http://www.w3.org/2000/01/rdf-schema#comment> "A protest is defined as a public demonstration in which the participants do not engage in violence, though violence may be used against them."@en .
+<https://schema.coypu.org/global#Protest> <http://www.w3.org/2000/01/rdf-schema#label> "Protest"@en .
+# 
+# https://schema.coypu.org/global#ProtestWithIntervention
+<https://schema.coypu.org/global#ProtestWithIntervention> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#ProtestWithIntervention> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Protest> .
+<https://schema.coypu.org/global#ProtestWithIntervention> <http://www.w3.org/2000/01/rdf-schema#label> "Protest with intervention"@en .
+# 
+# https://schema.coypu.org/global#RailwaySegment
+<https://schema.coypu.org/global#RailwaySegment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#RailwaySegment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Infrastructure> .
+<https://schema.coypu.org/global#RailwaySegment> <http://www.w3.org/2000/01/rdf-schema#comment> "A railway track between train stations."@en .
+<https://schema.coypu.org/global#RailwaySegment> <http://www.w3.org/2000/01/rdf-schema#label> "RailwaySegment"@en .
+# 
+# https://schema.coypu.org/global#Region
+<https://schema.coypu.org/global#Region> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#Region> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Location> .
+<https://schema.coypu.org/global#Region> <http://www.w3.org/2000/01/rdf-schema#comment> "An administrative or economic area."@en .
+<https://schema.coypu.org/global#Region> <http://www.w3.org/2000/01/rdf-schema#label> "Region"@en .
+<https://schema.coypu.org/global#Region> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.wikidata.org/entity/Q82794> .
+<https://schema.coypu.org/global#Region> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://dbpedia.org/ontology/AdministrativeRegion> .
+<https://schema.coypu.org/global#Region> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://schema.org/AdministrativeArea> .
+# 
+# https://schema.coypu.org/global#RegionalIndustry
+<https://schema.coypu.org/global#RegionalIndustry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#RegionalIndustry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Industry> .
+<https://schema.coypu.org/global#RegionalIndustry> <http://www.w3.org/2000/01/rdf-schema#comment> "An economic sector located in a specific country or region, from the Exiobase dataset."@en .
+<https://schema.coypu.org/global#RegionalIndustry> <http://www.w3.org/2000/01/rdf-schema#label> "RegionalIndustry"@en .
+# 
+# https://schema.coypu.org/global#RegionalIndustryCoefficient
+<https://schema.coypu.org/global#RegionalIndustryCoefficient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#RegionalIndustryCoefficient> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Feature> .
+<https://schema.coypu.org/global#RegionalIndustryCoefficient> <http://www.w3.org/2000/01/rdf-schema#comment> "The quantified dependency of a RegionalIndustry to another, from the Exiobase dataset."@en .
+<https://schema.coypu.org/global#RegionalIndustryCoefficient> <http://www.w3.org/2000/01/rdf-schema#label> "RegionalIndustryCoefficient"@en .
+# 
+# https://schema.coypu.org/global#RemoteExplosiveOrLandmineOrIED
+<https://schema.coypu.org/global#RemoteExplosiveOrLandmineOrIED> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#RemoteExplosiveOrLandmineOrIED> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#ExplosionOrRemoteViolence> .
+<https://schema.coypu.org/global#RemoteExplosiveOrLandmineOrIED> <http://www.w3.org/2000/01/rdf-schema#label> "Remote explosive or landmine"@en .
+# 
+# https://schema.coypu.org/global#Riot
+<https://schema.coypu.org/global#Riot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#Riot> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Demonstration> .
+<https://schema.coypu.org/global#Riot> <http://www.w3.org/2000/01/rdf-schema#comment> "A violent event where demonstrators or mobs engage in disruptive acts, including but not limited to rock throwing, property destruction, etc."@en .
+<https://schema.coypu.org/global#Riot> <http://www.w3.org/2000/01/rdf-schema#label> "Riot"@en .
+# 
+# https://schema.coypu.org/global#River
+<https://schema.coypu.org/global#River> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#River> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Location> .
+<https://schema.coypu.org/global#River> <http://www.w3.org/2000/01/rdf-schema#comment> "A large natural stream of water emptying into an ocean, lake, or other body of water and usually fed along its course by converging tributaries. Often providing critial logistics infrastructure."@en .
+<https://schema.coypu.org/global#River> <http://www.w3.org/2000/01/rdf-schema#label> "River"@en .
+# 
+# https://schema.coypu.org/global#Service
+<https://schema.coypu.org/global#Service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#Service> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Product> .
+<https://schema.coypu.org/global#Service> <http://www.w3.org/2000/01/rdf-schema#comment> "An economic activity that is done for others as an occupation or business."@en .
+<https://schema.coypu.org/global#Service> <http://www.w3.org/2000/01/rdf-schema#label> "Service"@en .
+<https://schema.coypu.org/global#Service> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.wikidata.org/entity/Q7406919> .
+# 
+# https://schema.coypu.org/global#SexualViolence
+<https://schema.coypu.org/global#SexualViolence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#SexualViolence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#ViolenceAgainstCivilians> .
+<https://schema.coypu.org/global#SexualViolence> <http://www.w3.org/2000/01/rdf-schema#label> "Sexual violence"@en .
+# 
+# https://schema.coypu.org/global#ShellingOrArtilleryOrMissileAttack
+<https://schema.coypu.org/global#ShellingOrArtilleryOrMissileAttack> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#ShellingOrArtilleryOrMissileAttack> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#ExplosionOrRemoteViolence> .
+<https://schema.coypu.org/global#ShellingOrArtilleryOrMissileAttack> <http://www.w3.org/2000/01/rdf-schema#label> "Shelling or artillery or missile attack"@en .
+# 
+# https://schema.coypu.org/global#SocioPoliticalEvent
+<https://schema.coypu.org/global#SocioPoliticalEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#SocioPoliticalEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Event> .
+<https://schema.coypu.org/global#SocioPoliticalEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "An event of socio-political relevance, from the IECWS dataset."@en .
+<https://schema.coypu.org/global#SocioPoliticalEvent> <http://www.w3.org/2000/01/rdf-schema#label> "SocioPoliticalEvent"@en .
+<https://schema.coypu.org/global#SocioPoliticalEvent> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://dataverse.harvard.edu/dataverse/icews> .
+# 
+# https://schema.coypu.org/global#StrategicDevelopment
+<https://schema.coypu.org/global#StrategicDevelopment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#StrategicDevelopment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#NonViolentAction> .
+<https://schema.coypu.org/global#StrategicDevelopment> <http://www.w3.org/2000/01/rdf-schema#comment> "An activity of a violent group that is not itself recorded as political violence, yet may trigger future events or contribute to political dynamics within and across states."@en .
+<https://schema.coypu.org/global#StrategicDevelopment> <http://www.w3.org/2000/01/rdf-schema#label> "StrategicDevelopments"@en .
+# 
+# https://schema.coypu.org/global#SuicideBomb
+<https://schema.coypu.org/global#SuicideBomb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#SuicideBomb> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#ExplosionOrRemoteViolence> .
+<https://schema.coypu.org/global#SuicideBomb> <http://www.w3.org/2000/01/rdf-schema#label> "Suicide bomb"@en .
+# 
+# https://schema.coypu.org/global#Supplier
+<https://schema.coypu.org/global#Supplier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#Supplier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Company> .
+<https://schema.coypu.org/global#Supplier> <http://www.w3.org/2000/01/rdf-schema#comment> "An organization that provides something needed such as a product or service to another organization."@en .
+<https://schema.coypu.org/global#Supplier> <http://www.w3.org/2000/01/rdf-schema#label> "Supplier"@en .
+<https://schema.coypu.org/global#Supplier> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.w3id.org/ecsel-dr-OM#Supplier> .
+# 
+# https://schema.coypu.org/global#Terminal
+<https://schema.coypu.org/global#Terminal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#Terminal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Infrastructure> .
+<https://schema.coypu.org/global#Terminal> <http://www.w3.org/2000/01/rdf-schema#comment> "A terminal to connect pipelines."@en .
+<https://schema.coypu.org/global#Terminal> <http://www.w3.org/2000/01/rdf-schema#label> "Terminal"@en .
+# 
+# https://schema.coypu.org/global#TextTopic
+<https://schema.coypu.org/global#TextTopic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#TextTopic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#WikiNews> .
+<https://schema.coypu.org/global#TextTopic> <http://www.w3.org/2000/01/rdf-schema#label> "TextTopic"@en .
+# 
+# https://schema.coypu.org/global#Timespan
+<https://schema.coypu.org/global#Timespan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#Timespan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Feature> .
+<https://schema.coypu.org/global#Timespan> <http://www.w3.org/2000/01/rdf-schema#comment> "A period or duration."@en .
+<https://schema.coypu.org/global#Timespan> <http://www.w3.org/2000/01/rdf-schema#label> "Timespan"@en .
+# 
+# https://schema.coypu.org/global#TrainStation
+<https://schema.coypu.org/global#TrainStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#TrainStation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Infrastructure> .
+<https://schema.coypu.org/global#TrainStation> <http://www.w3.org/2000/01/rdf-schema#comment> "A logistics hub for rail freight."@en .
+<https://schema.coypu.org/global#TrainStation> <http://www.w3.org/2000/01/rdf-schema#label> "TrainStation"@en .
+# 
+# https://schema.coypu.org/global#ViolenceAgainstCivilians
+<https://schema.coypu.org/global#ViolenceAgainstCivilians> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#ViolenceAgainstCivilians> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#ViolentEvent> .
+<https://schema.coypu.org/global#ViolenceAgainstCivilians> <http://www.w3.org/2000/01/rdf-schema#comment> "A violent interaction between two politically organized armed groups at a particular time and location."@en .
+<https://schema.coypu.org/global#ViolenceAgainstCivilians> <http://www.w3.org/2000/01/rdf-schema#label> "Violence against civilians"@en .
+# 
+# https://schema.coypu.org/global#ViolentDemonstration
+<https://schema.coypu.org/global#ViolentDemonstration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#ViolentDemonstration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Riot> .
+<https://schema.coypu.org/global#ViolentDemonstration> <http://www.w3.org/2000/01/rdf-schema#label> "Violent demonstration"@en .
+# 
+# https://schema.coypu.org/global#ViolentEvent
+<https://schema.coypu.org/global#ViolentEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#ViolentEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Conflict> .
+<https://schema.coypu.org/global#ViolentEvent> <http://www.w3.org/2000/01/rdf-schema#label> "ViolentEvent"@en .
+# 
+# https://schema.coypu.org/global#WikiNews
+<https://schema.coypu.org/global#WikiNews> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#WikiNews> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Event> .
+<https://schema.coypu.org/global#WikiNews> <http://www.w3.org/2000/01/rdf-schema#comment> "A current news event extracted from Wikipedia."@en .
+<https://schema.coypu.org/global#WikiNews> <http://www.w3.org/2000/01/rdf-schema#label> "WikiNews"@en .
+<https://schema.coypu.org/global#WikiNews> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://en.wikipedia.org/wiki/Portal:Current_events> .
+# 
+# https://schema.coypu.org/global#Wildfire
+<https://schema.coypu.org/global#Wildfire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/global#Wildfire> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Event> .
+<https://schema.coypu.org/global#Wildfire> <http://www.w3.org/2000/01/rdf-schema#comment> "A wildfire observed by the MODIS and VIIRS satellites."@en .
+<https://schema.coypu.org/global#Wildfire> <http://www.w3.org/2000/01/rdf-schema#label> "Wildfire (Satellite)"@en .
+# 
+# https://schema.coypu.org/gta#GlobalTradeAlertFeature
+<https://schema.coypu.org/gta#GlobalTradeAlertFeature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/gta#GlobalTradeAlertFeature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Feature> .
+<https://schema.coypu.org/gta#GlobalTradeAlertFeature> <http://www.w3.org/2000/01/rdf-schema#comment> "An annotation for the Global Trade Alert dataset."@en .
+<https://schema.coypu.org/gta#GlobalTradeAlertFeature> <http://www.w3.org/2000/01/rdf-schema#label> "GlobalTradeAlertFeature"@en .
+# 
+# https://schema.coypu.org/gta#StateAct
+<https://schema.coypu.org/gta#StateAct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/gta#StateAct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Event> .
+<https://schema.coypu.org/gta#StateAct> <http://www.w3.org/2000/01/rdf-schema#comment> "For the GTA database, a state act is equivalent to an announcement by a government body. Each announcement documented by the GTA team includes at least one new and credible promise for change in market conditions at home or abroad.\nEach state act in the GTA database consists of one or more interventions. The interventions represent the used policy instrument plus the direction of the induced change (liberalising or harmful). The clear majority of GTA database entries are state acts with a single associated intervention. For example, the announcement of a new production subsidy to steel producers would be recorded as one state act with one intervention."@en .
+<https://schema.coypu.org/gta#StateAct> <http://www.w3.org/2000/01/rdf-schema#label> "StateAct"@en .
+# 
+# https://schema.coypu.org/ta#TradeAgreement
+<https://schema.coypu.org/ta#TradeAgreement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/ta#TradeAgreement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Event> .
+<https://schema.coypu.org/ta#TradeAgreement> <http://www.w3.org/2000/01/rdf-schema#comment> "A trade agreement (also known as trade pact) is a wide-ranging taxes, tariff and trade treaty that often includes investment guarantees. It exists when two or more countries agree on terms that help them trade with each other. The most common trade agreements are of the preferential and free trade types, which are concluded in order to reduce (or eliminate) tariffs,  quotas and other trade restrictions on items traded between the signatories."@en .
+<https://schema.coypu.org/ta#TradeAgreement> <http://www.w3.org/2000/01/rdf-schema#label> "TradeAgreement"@en .
+# 
+# https://schema.coypu.org/tiva#TradeInValueAdded
+<https://schema.coypu.org/tiva#TradeInValueAdded> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/tiva#TradeInValueAdded> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Feature> .
+<https://schema.coypu.org/tiva#TradeInValueAdded> <http://www.w3.org/2000/01/rdf-schema#comment> "An annotation for the OECD Trade in Value Added dataset."@en .
+<https://schema.coypu.org/tiva#TradeInValueAdded> <http://www.w3.org/2000/01/rdf-schema#label> "TradeInValueAdded"@en .
+# 
+# https://schema.coypu.org/vtf#ExgrDva
+<https://schema.coypu.org/vtf#ExgrDva> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://schema.coypu.org/vtf#Trade> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <https://schema.coypu.org/vtf#hasTrade> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# https://schema.coypu.org/vtf#Trade
+<https://schema.coypu.org/vtf#Trade> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid2 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://schema.coypu.org/vtf#TradeInValueAdded> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <https://schema.coypu.org/vtf#hasTradeValueAdded> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid6 .
+_:genid6 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://schema.coypu.org/vtf#TradeValue> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <https://schema.coypu.org/vtf#hasTradeValue> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid8 .
+_:genid8 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://schema.coypu.org/global#Product> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://schema.coypu.org/vtf#hasTradeProduct> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://schema.coypu.org/vtf#TradeAmount> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://schema.coypu.org/vtf#hasTradeAmount> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://schema.coypu.org/vtf#Trade> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid11 .
+_:genid11 <http://www.w3.org/2002/07/owl#hasSelf> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <https://schema.coypu.org/vtf#isTrade> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+# 
+# https://schema.coypu.org/world-port-index#PortFeature
+<https://schema.coypu.org/world-port-index#PortFeature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://schema.coypu.org/world-port-index#PortFeature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.coypu.org/global#Feature> .
+<https://schema.coypu.org/world-port-index#PortFeature> <http://www.w3.org/2000/01/rdf-schema#comment> "An annotation for the World Port Index dataset."@en .
+<https://schema.coypu.org/world-port-index#PortFeature> <http://www.w3.org/2000/01/rdf-schema#label> "PortFeature"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<https://schema.coypu.org/em-dat#IndustrialAccident> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.wikidata.org/entity/Q68800046> .
+# 
+<https://schema.coypu.org/em-dat#TechnologicalDisaster> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.wikidata.org/entity/Q37282022> .
+# 
+<https://schema.coypu.org/em-dat#TransportAccident> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.wikidata.org/entity/Q11822042> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
